@@ -1,0 +1,520 @@
+[32m[info][0m mode: compression
+[32m[info][0m original data: random
+[32m[info][0m compressed data: /gpfs/alpine/proj-shared/csc143/jieyang/data/512x512x512/velocity_x.dat.mgard
+[32m[info][0m data type: Double precision
+[32m[info][0m error bound mode: Absolute
+[32m[info][0m error bound: 1.000000e+00
+[32m[info][0m s: inf
+[32m[info][0m lossless: Huffman
+[32m[info][0m device type: HIP
+[32m[info][0m Verbose: enabled
+[32m[info][0m Using 1 devices.
+[32m[info][0m Estimated memory usage: 0.793062GB, Available: 16.000000GB
+[32m[info][0m DomainDecomposer: no decomposition used
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.001624 s
+[32m[info][0m Compressing subdomain 0 with shape: 256 256 256 
+[32m[info][0m Select device: AMD GPU
+[34m[time][0m Decomposition time: 0.007551 s
+[34m[time][0m Decomposition throughput: 17.774134 GB/s
+[34m[time][0m Quantization time: 0.007549 s
+[34m[time][0m Quantization throughput: 17.778473 GB/s
+[32m[info][0m Outlier ratio: 0/16777216 (0.000000%)
+[32m[info][0m Huffman block size: 20480
+[32m[info][0m Huffman dictionary size: 8192
+[32m[info][0m Huffman compress ratio: 67108864/14588120 (4.600241)
+[34m[time][0m Huffman compress time: 0.120848 s
+[34m[time][0m Low-level compression time: 0.138024 s
+[34m[time][0m Low-level compression throughput: 0.972422 GB/s
+[34m[time][0m Compress single subdomain time: 0.158689 s
+[34m[time][0m Aggregated low-level compression time: 0.163904 s
+[34m[time][0m Aggregated low-level compression throughput: 0.818880 GB/s
+[34m[time][0m Serialization time: 0.000678 s
+[34m[time][0m High-level compression time: 0.168239 s
+[34m[time][0m High-level compression throughput: 0.797779 GB/s
+[32m[info][0m Compression ratio: 9.20042
+[32m[info][0m Using 1 devices.
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.000854 s
+[32m[info][0m DomainDecomposer: no decomposition used
+[34m[time][0m Deserialization time: 0.000005 s
+[32m[info][0m Decompressing subdomain 0 with shape: 256 256 256 
+[32m[info][0m Select device: AMD GPU
+[34m[time][0m Huffman decompress time: 0.054977 s
+[34m[time][0m Dequantization time: 0.000238 s
+[34m[time][0m Dequantization throughput: 564.868031 GB/s
+[34m[time][0m Recomposition time: 0.006101 s
+[34m[time][0m Recomposition throughput: 21.999083 GB/s
+[34m[time][0m Low-level decompression time: 0.064077 s
+[34m[time][0m Low-level decompression throughput: 2.094620 GB/s
+[34m[time][0m Decompress single subdomain time: 0.083930 s
+[34m[time][0m Aggregated low-level decompression time: 0.089012 s
+[34m[time][0m Aggregated low-level decompression throughput: 1.507859 GB/s
+[34m[time][0m High-level decompression time: 0.091373 s
+[34m[time][0m High-level decompression throughput: 1.468892 GB/s
+[32m[info][0m Absoluate L_inf error: 3.225106e-02 ([32mSatisified[0m)
+[32m[info][0m MSE: 6.055713e-05
+[32m[info][0m PSNR: 61.2632
+[32m[info][0m Using 1 devices.
+[32m[info][0m Estimated memory usage: 0.793062GB, Available: 16.000000GB
+[32m[info][0m DomainDecomposer: no decomposition used
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.001453 s
+[32m[info][0m Compressing subdomain 0 with shape: 256 256 256 
+[32m[info][0m Select device: AMD GPU
+[34m[time][0m Decomposition time: 0.003947 s
+[34m[time][0m Decomposition throughput: 34.001010 GB/s
+[34m[time][0m Quantization time: 0.000248 s
+[34m[time][0m Quantization throughput: 541.595794 GB/s
+[32m[info][0m Outlier ratio: 0/16777216 (0.000000%)
+[32m[info][0m Huffman block size: 20480
+[32m[info][0m Huffman dictionary size: 8192
+[32m[info][0m Huffman compress ratio: 67108864/14588120 (4.600241)
+[34m[time][0m Huffman compress time: 0.028213 s
+[34m[time][0m Low-level compression time: 0.034241 s
+[34m[time][0m Low-level compression throughput: 3.919830 GB/s
+[34m[time][0m Compress single subdomain time: 0.054282 s
+[34m[time][0m Aggregated low-level compression time: 0.059032 s
+[34m[time][0m Aggregated low-level compression throughput: 2.273662 GB/s
+[34m[time][0m Serialization time: 0.000656 s
+[34m[time][0m High-level compression time: 0.064117 s
+[34m[time][0m High-level compression throughput: 2.093321 GB/s
+[32m[info][0m Compression ratio: 9.20042
+[32m[info][0m Using 1 devices.
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.000695 s
+[32m[info][0m DomainDecomposer: no decomposition used
+[34m[time][0m Deserialization time: 0.000005 s
+[32m[info][0m Decompressing subdomain 0 with shape: 256 256 256 
+[32m[info][0m Select device: AMD GPU
+[34m[time][0m Huffman decompress time: 0.055514 s
+[34m[time][0m Dequantization time: 0.000228 s
+[34m[time][0m Dequantization throughput: 589.240226 GB/s
+[34m[time][0m Recomposition time: 0.004009 s
+[34m[time][0m Recomposition throughput: 33.480532 GB/s
+[34m[time][0m Low-level decompression time: 0.061715 s
+[34m[time][0m Low-level decompression throughput: 2.174794 GB/s
+[34m[time][0m Decompress single subdomain time: 0.082023 s
+[34m[time][0m Aggregated low-level decompression time: 0.086926 s
+[34m[time][0m Aggregated low-level decompression throughput: 1.544048 GB/s
+[34m[time][0m High-level decompression time: 0.089049 s
+[34m[time][0m High-level decompression throughput: 1.507239 GB/s
+[32m[info][0m Absoluate L_inf error: 3.225106e-02 ([32mSatisified[0m)
+[32m[info][0m MSE: 6.055713e-05
+[32m[info][0m PSNR: 61.2632
+[32m[info][0m Using 1 devices.
+[32m[info][0m Estimated memory usage: 0.793062GB, Available: 16.000000GB
+[32m[info][0m DomainDecomposer: no decomposition used
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.001548 s
+[32m[info][0m Compressing subdomain 0 with shape: 256 256 256 
+[32m[info][0m Select device: AMD GPU
+[34m[time][0m Decomposition time: 0.004077 s
+[34m[time][0m Decomposition throughput: 32.923147 GB/s
+[34m[time][0m Quantization time: 0.000238 s
+[34m[time][0m Quantization throughput: 564.699293 GB/s
+[32m[info][0m Outlier ratio: 0/16777216 (0.000000%)
+[32m[info][0m Huffman block size: 20480
+[32m[info][0m Huffman dictionary size: 8192
+[32m[info][0m Huffman compress ratio: 67108864/14588120 (4.600241)
+[34m[time][0m Huffman compress time: 0.027869 s
+[34m[time][0m Low-level compression time: 0.033820 s
+[34m[time][0m Low-level compression throughput: 3.968632 GB/s
+[34m[time][0m Compress single subdomain time: 0.054051 s
+[34m[time][0m Aggregated low-level compression time: 0.058851 s
+[34m[time][0m Aggregated low-level compression throughput: 2.280636 GB/s
+[34m[time][0m Serialization time: 0.000656 s
+[34m[time][0m High-level compression time: 0.062955 s
+[34m[time][0m High-level compression throughput: 2.131957 GB/s
+[32m[info][0m Compression ratio: 9.20042
+[32m[info][0m Using 1 devices.
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.000752 s
+[32m[info][0m DomainDecomposer: no decomposition used
+[34m[time][0m Deserialization time: 0.000006 s
+[32m[info][0m Decompressing subdomain 0 with shape: 256 256 256 
+[32m[info][0m Select device: AMD GPU
+[34m[time][0m Huffman decompress time: 0.055264 s
+[34m[time][0m Dequantization time: 0.000224 s
+[34m[time][0m Dequantization throughput: 600.140080 GB/s
+[34m[time][0m Recomposition time: 0.004041 s
+[34m[time][0m Recomposition throughput: 33.212337 GB/s
+[34m[time][0m Low-level decompression time: 0.061478 s
+[34m[time][0m Low-level decompression throughput: 2.183178 GB/s
+[34m[time][0m Decompress single subdomain time: 0.081578 s
+[34m[time][0m Aggregated low-level decompression time: 0.086496 s
+[34m[time][0m Aggregated low-level decompression throughput: 1.551718 GB/s
+[34m[time][0m High-level decompression time: 0.089023 s
+[34m[time][0m High-level decompression throughput: 1.507683 GB/s
+[32m[info][0m Absoluate L_inf error: 3.225106e-02 ([32mSatisified[0m)
+[32m[info][0m MSE: 6.055713e-05
+[32m[info][0m PSNR: 61.2632
+[32m[info][0m Using 1 devices.
+[32m[info][0m Estimated memory usage: 0.793062GB, Available: 16.000000GB
+[32m[info][0m DomainDecomposer: no decomposition used
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.001439 s
+[32m[info][0m Compressing subdomain 0 with shape: 256 256 256 
+[32m[info][0m Select device: AMD GPU
+[34m[time][0m Decomposition time: 0.003990 s
+[34m[time][0m Decomposition throughput: 33.642221 GB/s
+[34m[time][0m Quantization time: 0.000253 s
+[34m[time][0m Quantization throughput: 529.667435 GB/s
+[32m[info][0m Outlier ratio: 0/16777216 (0.000000%)
+[32m[info][0m Huffman block size: 20480
+[32m[info][0m Huffman dictionary size: 8192
+[32m[info][0m Huffman compress ratio: 67108864/14588120 (4.600241)
+[34m[time][0m Huffman compress time: 0.028067 s
+[34m[time][0m Low-level compression time: 0.034027 s
+[34m[time][0m Low-level compression throughput: 3.944490 GB/s
+[34m[time][0m Compress single subdomain time: 0.054629 s
+[34m[time][0m Aggregated low-level compression time: 0.059445 s
+[34m[time][0m Aggregated low-level compression throughput: 2.257856 GB/s
+[34m[time][0m Serialization time: 0.000667 s
+[34m[time][0m High-level compression time: 0.063593 s
+[34m[time][0m High-level compression throughput: 2.110586 GB/s
+[32m[info][0m Compression ratio: 9.20042
+[32m[info][0m Using 1 devices.
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.000603 s
+[32m[info][0m DomainDecomposer: no decomposition used
+[34m[time][0m Deserialization time: 0.000006 s
+[32m[info][0m Decompressing subdomain 0 with shape: 256 256 256 
+[32m[info][0m Select device: AMD GPU
+[34m[time][0m Huffman decompress time: 0.055971 s
+[34m[time][0m Dequantization time: 0.000226 s
+[34m[time][0m Dequantization throughput: 594.757467 GB/s
+[34m[time][0m Recomposition time: 0.004042 s
+[34m[time][0m Recomposition throughput: 33.206749 GB/s
+[34m[time][0m Low-level decompression time: 0.061991 s
+[34m[time][0m Low-level decompression throughput: 2.165103 GB/s
+[34m[time][0m Decompress single subdomain time: 0.082126 s
+[34m[time][0m Aggregated low-level decompression time: 0.086950 s
+[34m[time][0m Aggregated low-level decompression throughput: 1.543627 GB/s
+[34m[time][0m High-level decompression time: 0.089066 s
+[34m[time][0m High-level decompression throughput: 1.506951 GB/s
+[32m[info][0m Absoluate L_inf error: 3.225106e-02 ([32mSatisified[0m)
+[32m[info][0m MSE: 6.055713e-05
+[32m[info][0m PSNR: 61.2632
+[32m[info][0m Using 1 devices.
+[32m[info][0m Estimated memory usage: 0.793062GB, Available: 16.000000GB
+[32m[info][0m DomainDecomposer: no decomposition used
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.001545 s
+[32m[info][0m Compressing subdomain 0 with shape: 256 256 256 
+[32m[info][0m Select device: AMD GPU
+[34m[time][0m Decomposition time: 0.004040 s
+[34m[time][0m Decomposition throughput: 33.224529 GB/s
+[34m[time][0m Quantization time: 0.000251 s
+[34m[time][0m Quantization throughput: 535.491486 GB/s
+[32m[info][0m Outlier ratio: 0/16777216 (0.000000%)
+[32m[info][0m Huffman block size: 20480
+[32m[info][0m Huffman dictionary size: 8192
+[32m[info][0m Huffman compress ratio: 67108864/14588120 (4.600241)
+[34m[time][0m Huffman compress time: 0.028026 s
+[34m[time][0m Low-level compression time: 0.033951 s
+[34m[time][0m Low-level compression throughput: 3.953254 GB/s
+[34m[time][0m Compress single subdomain time: 0.053712 s
+[34m[time][0m Aggregated low-level compression time: 0.058357 s
+[34m[time][0m Aggregated low-level compression throughput: 2.299925 GB/s
+[34m[time][0m Serialization time: 0.000655 s
+[34m[time][0m High-level compression time: 0.062541 s
+[34m[time][0m High-level compression throughput: 2.146090 GB/s
+[32m[info][0m Compression ratio: 9.20042
+[32m[info][0m Using 1 devices.
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.000820 s
+[32m[info][0m DomainDecomposer: no decomposition used
+[34m[time][0m Deserialization time: 0.000005 s
+[32m[info][0m Decompressing subdomain 0 with shape: 256 256 256 
+[32m[info][0m Select device: AMD GPU
+[34m[time][0m Huffman decompress time: 0.056258 s
+[34m[time][0m Dequantization time: 0.000224 s
+[34m[time][0m Dequantization throughput: 599.255842 GB/s
+[34m[time][0m Recomposition time: 0.004013 s
+[34m[time][0m Recomposition throughput: 33.445342 GB/s
+[34m[time][0m Low-level decompression time: 0.062532 s
+[34m[time][0m Low-level decompression throughput: 2.146379 GB/s
+[34m[time][0m Decompress single subdomain time: 0.082810 s
+[34m[time][0m Aggregated low-level decompression time: 0.087590 s
+[34m[time][0m Aggregated low-level decompression throughput: 1.532336 GB/s
+[34m[time][0m High-level decompression time: 0.089629 s
+[34m[time][0m High-level decompression throughput: 1.497483 GB/s
+[32m[info][0m Absoluate L_inf error: 3.225106e-02 ([32mSatisified[0m)
+[32m[info][0m MSE: 6.055713e-05
+[32m[info][0m PSNR: 61.2632
+[32m[info][0m Using 1 devices.
+[32m[info][0m Estimated memory usage: 0.793062GB, Available: 16.000000GB
+[32m[info][0m DomainDecomposer: no decomposition used
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.001506 s
+[32m[info][0m Compressing subdomain 0 with shape: 256 256 256 
+[32m[info][0m Select device: AMD GPU
+[34m[time][0m Decomposition time: 0.003929 s
+[34m[time][0m Decomposition throughput: 34.157578 GB/s
+[34m[time][0m Quantization time: 0.000258 s
+[34m[time][0m Quantization throughput: 520.409324 GB/s
+[32m[info][0m Outlier ratio: 0/16777216 (0.000000%)
+[32m[info][0m Huffman block size: 20480
+[32m[info][0m Huffman dictionary size: 8192
+[32m[info][0m Huffman compress ratio: 67108864/14588120 (4.600241)
+[34m[time][0m Huffman compress time: 0.027996 s
+[34m[time][0m Low-level compression time: 0.033760 s
+[34m[time][0m Low-level compression throughput: 3.975589 GB/s
+[34m[time][0m Compress single subdomain time: 0.053636 s
+[34m[time][0m Aggregated low-level compression time: 0.058497 s
+[34m[time][0m Aggregated low-level compression throughput: 2.294424 GB/s
+[34m[time][0m Serialization time: 0.000658 s
+[34m[time][0m High-level compression time: 0.062752 s
+[34m[time][0m High-level compression throughput: 2.138859 GB/s
+[32m[info][0m Compression ratio: 9.20042
+[32m[info][0m Using 1 devices.
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.000635 s
+[32m[info][0m DomainDecomposer: no decomposition used
+[34m[time][0m Deserialization time: 0.000005 s
+[32m[info][0m Decompressing subdomain 0 with shape: 256 256 256 
+[32m[info][0m Select device: AMD GPU
+[34m[time][0m Huffman decompress time: 0.056138 s
+[34m[time][0m Dequantization time: 0.000234 s
+[34m[time][0m Dequantization throughput: 574.063327 GB/s
+[34m[time][0m Recomposition time: 0.004046 s
+[34m[time][0m Recomposition throughput: 33.174419 GB/s
+[34m[time][0m Low-level decompression time: 0.062617 s
+[34m[time][0m Low-level decompression throughput: 2.143486 GB/s
+[34m[time][0m Decompress single subdomain time: 0.082528 s
+[34m[time][0m Aggregated low-level decompression time: 0.087477 s
+[34m[time][0m Aggregated low-level decompression throughput: 1.534320 GB/s
+[34m[time][0m High-level decompression time: 0.089649 s
+[34m[time][0m High-level decompression throughput: 1.497148 GB/s
+[32m[info][0m Absoluate L_inf error: 3.225106e-02 ([32mSatisified[0m)
+[32m[info][0m MSE: 6.055713e-05
+[32m[info][0m PSNR: 61.2632
+[32m[info][0m Using 1 devices.
+[32m[info][0m Estimated memory usage: 0.793062GB, Available: 16.000000GB
+[32m[info][0m DomainDecomposer: no decomposition used
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.001380 s
+[32m[info][0m Compressing subdomain 0 with shape: 256 256 256 
+[32m[info][0m Select device: AMD GPU
+[34m[time][0m Decomposition time: 0.003987 s
+[34m[time][0m Decomposition throughput: 33.664177 GB/s
+[34m[time][0m Quantization time: 0.000254 s
+[34m[time][0m Quantization throughput: 528.434976 GB/s
+[32m[info][0m Outlier ratio: 0/16777216 (0.000000%)
+[32m[info][0m Huffman block size: 20480
+[32m[info][0m Huffman dictionary size: 8192
+[32m[info][0m Huffman compress ratio: 67108864/14588120 (4.600241)
+[34m[time][0m Huffman compress time: 0.028511 s
+[34m[time][0m Low-level compression time: 0.034616 s
+[34m[time][0m Low-level compression throughput: 3.877287 GB/s
+[34m[time][0m Compress single subdomain time: 0.055417 s
+[34m[time][0m Aggregated low-level compression time: 0.060173 s
+[34m[time][0m Aggregated low-level compression throughput: 2.230541 GB/s
+[34m[time][0m Serialization time: 0.000656 s
+[34m[time][0m High-level compression time: 0.064573 s
+[34m[time][0m High-level compression throughput: 2.078553 GB/s
+[32m[info][0m Compression ratio: 9.20042
+[32m[info][0m Using 1 devices.
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.000838 s
+[32m[info][0m DomainDecomposer: no decomposition used
+[34m[time][0m Deserialization time: 0.000005 s
+[32m[info][0m Decompressing subdomain 0 with shape: 256 256 256 
+[32m[info][0m Select device: AMD GPU
+[34m[time][0m Huffman decompress time: 0.056312 s
+[34m[time][0m Dequantization time: 0.000235 s
+[34m[time][0m Dequantization throughput: 570.277785 GB/s
+[34m[time][0m Recomposition time: 0.003982 s
+[34m[time][0m Recomposition throughput: 33.707193 GB/s
+[34m[time][0m Low-level decompression time: 0.062321 s
+[34m[time][0m Low-level decompression throughput: 2.153642 GB/s
+[34m[time][0m Decompress single subdomain time: 0.082171 s
+[34m[time][0m Aggregated low-level decompression time: 0.087229 s
+[34m[time][0m Aggregated low-level decompression throughput: 1.538676 GB/s
+[34m[time][0m High-level decompression time: 0.089449 s
+[34m[time][0m High-level decompression throughput: 1.500499 GB/s
+[32m[info][0m Absoluate L_inf error: 3.225106e-02 ([32mSatisified[0m)
+[32m[info][0m MSE: 6.055713e-05
+[32m[info][0m PSNR: 61.2632
+[32m[info][0m Using 1 devices.
+[32m[info][0m Estimated memory usage: 0.793062GB, Available: 16.000000GB
+[32m[info][0m DomainDecomposer: no decomposition used
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.001556 s
+[32m[info][0m Compressing subdomain 0 with shape: 256 256 256 
+[32m[info][0m Select device: AMD GPU
+[34m[time][0m Decomposition time: 0.003994 s
+[34m[time][0m Decomposition throughput: 33.606909 GB/s
+[34m[time][0m Quantization time: 0.000250 s
+[34m[time][0m Quantization throughput: 536.068953 GB/s
+[32m[info][0m Outlier ratio: 0/16777216 (0.000000%)
+[32m[info][0m Huffman block size: 20480
+[32m[info][0m Huffman dictionary size: 8192
+[32m[info][0m Huffman compress ratio: 67108864/14588120 (4.600241)
+[34m[time][0m Huffman compress time: 0.027654 s
+[34m[time][0m Low-level compression time: 0.033817 s
+[34m[time][0m Low-level compression throughput: 3.968947 GB/s
+[34m[time][0m Compress single subdomain time: 0.054204 s
+[34m[time][0m Aggregated low-level compression time: 0.058938 s
+[34m[time][0m Aggregated low-level compression throughput: 2.277257 GB/s
+[34m[time][0m Serialization time: 0.000654 s
+[34m[time][0m High-level compression time: 0.062905 s
+[34m[time][0m High-level compression throughput: 2.133672 GB/s
+[32m[info][0m Compression ratio: 9.20042
+[32m[info][0m Using 1 devices.
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.000708 s
+[32m[info][0m DomainDecomposer: no decomposition used
+[34m[time][0m Deserialization time: 0.000005 s
+[32m[info][0m Decompressing subdomain 0 with shape: 256 256 256 
+[32m[info][0m Select device: AMD GPU
+[34m[time][0m Huffman decompress time: 0.055508 s
+[34m[time][0m Dequantization time: 0.000224 s
+[34m[time][0m Dequantization throughput: 599.845044 GB/s
+[34m[time][0m Recomposition time: 0.004048 s
+[34m[time][0m Recomposition throughput: 33.159207 GB/s
+[34m[time][0m Low-level decompression time: 0.062065 s
+[34m[time][0m Low-level decompression throughput: 2.162543 GB/s
+[34m[time][0m Decompress single subdomain time: 0.082080 s
+[34m[time][0m Aggregated low-level decompression time: 0.086971 s
+[34m[time][0m Aggregated low-level decompression throughput: 1.543244 GB/s
+[34m[time][0m High-level decompression time: 0.089011 s
+[34m[time][0m High-level decompression throughput: 1.507873 GB/s
+[32m[info][0m Absoluate L_inf error: 3.225106e-02 ([32mSatisified[0m)
+[32m[info][0m MSE: 6.055713e-05
+[32m[info][0m PSNR: 61.2632
+[32m[info][0m Using 1 devices.
+[32m[info][0m Estimated memory usage: 0.793062GB, Available: 16.000000GB
+[32m[info][0m DomainDecomposer: no decomposition used
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.001750 s
+[32m[info][0m Compressing subdomain 0 with shape: 256 256 256 
+[32m[info][0m Select device: AMD GPU
+[34m[time][0m Decomposition time: 0.004025 s
+[34m[time][0m Decomposition throughput: 33.342259 GB/s
+[34m[time][0m Quantization time: 0.000248 s
+[34m[time][0m Quantization throughput: 540.198535 GB/s
+[32m[info][0m Outlier ratio: 0/16777216 (0.000000%)
+[32m[info][0m Huffman block size: 20480
+[32m[info][0m Huffman dictionary size: 8192
+[32m[info][0m Huffman compress ratio: 67108864/14588120 (4.600241)
+[34m[time][0m Huffman compress time: 0.028062 s
+[34m[time][0m Low-level compression time: 0.034095 s
+[34m[time][0m Low-level compression throughput: 3.936605 GB/s
+[34m[time][0m Compress single subdomain time: 0.054243 s
+[34m[time][0m Aggregated low-level compression time: 0.058939 s
+[34m[time][0m Aggregated low-level compression throughput: 2.277227 GB/s
+[34m[time][0m Serialization time: 0.000653 s
+[34m[time][0m High-level compression time: 0.063724 s
+[34m[time][0m High-level compression throughput: 2.106250 GB/s
+[32m[info][0m Compression ratio: 9.20042
+[32m[info][0m Using 1 devices.
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.000719 s
+[32m[info][0m DomainDecomposer: no decomposition used
+[34m[time][0m Deserialization time: 0.000005 s
+[32m[info][0m Decompressing subdomain 0 with shape: 256 256 256 
+[32m[info][0m Select device: AMD GPU
+[34m[time][0m Huffman decompress time: 0.056121 s
+[34m[time][0m Dequantization time: 0.000226 s
+[34m[time][0m Dequantization throughput: 592.865912 GB/s
+[34m[time][0m Recomposition time: 0.004040 s
+[34m[time][0m Recomposition throughput: 33.219316 GB/s
+[34m[time][0m Low-level decompression time: 0.062420 s
+[34m[time][0m Low-level decompression throughput: 2.150222 GB/s
+[34m[time][0m Decompress single subdomain time: 0.082431 s
+[34m[time][0m Aggregated low-level decompression time: 0.087260 s
+[34m[time][0m Aggregated low-level decompression throughput: 1.538141 GB/s
+[34m[time][0m High-level decompression time: 0.089418 s
+[34m[time][0m High-level decompression throughput: 1.501016 GB/s
+[32m[info][0m Absoluate L_inf error: 3.225106e-02 ([32mSatisified[0m)
+[32m[info][0m MSE: 6.055713e-05
+[32m[info][0m PSNR: 61.2632
+[32m[info][0m Using 1 devices.
+[32m[info][0m Estimated memory usage: 0.793062GB, Available: 16.000000GB
+[32m[info][0m DomainDecomposer: no decomposition used
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.001548 s
+[32m[info][0m Compressing subdomain 0 with shape: 256 256 256 
+[32m[info][0m Select device: AMD GPU
+[34m[time][0m Decomposition time: 0.004007 s
+[34m[time][0m Decomposition throughput: 33.492061 GB/s
+[34m[time][0m Quantization time: 0.000256 s
+[34m[time][0m Quantization throughput: 524.938021 GB/s
+[32m[info][0m Outlier ratio: 0/16777216 (0.000000%)
+[32m[info][0m Huffman block size: 20480
+[32m[info][0m Huffman dictionary size: 8192
+[32m[info][0m Huffman compress ratio: 67108864/14588120 (4.600241)
+[34m[time][0m Huffman compress time: 0.027822 s
+[34m[time][0m Low-level compression time: 0.033879 s
+[34m[time][0m Low-level compression throughput: 3.961644 GB/s
+[34m[time][0m Compress single subdomain time: 0.054473 s
+[34m[time][0m Aggregated low-level compression time: 0.059345 s
+[34m[time][0m Aggregated low-level compression throughput: 2.261644 GB/s
+[34m[time][0m Serialization time: 0.000654 s
+[34m[time][0m High-level compression time: 0.063629 s
+[34m[time][0m High-level compression throughput: 2.109375 GB/s
+[32m[info][0m Compression ratio: 9.20042
+[32m[info][0m Using 1 devices.
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.000746 s
+[32m[info][0m DomainDecomposer: no decomposition used
+[34m[time][0m Deserialization time: 0.000005 s
+[32m[info][0m Decompressing subdomain 0 with shape: 256 256 256 
+[32m[info][0m Select device: AMD GPU
+[34m[time][0m Huffman decompress time: 0.055906 s
+[34m[time][0m Dequantization time: 0.000229 s
+[34m[time][0m Dequantization throughput: 586.585179 GB/s
+[34m[time][0m Recomposition time: 0.004004 s
+[34m[time][0m Recomposition throughput: 33.524319 GB/s
+[34m[time][0m Low-level decompression time: 0.062010 s
+[34m[time][0m Low-level decompression throughput: 2.164469 GB/s
+[34m[time][0m Decompress single subdomain time: 0.082837 s
+[34m[time][0m Aggregated low-level decompression time: 0.087739 s
+[34m[time][0m Aggregated low-level decompression throughput: 1.529733 GB/s
+[34m[time][0m High-level decompression time: 0.089771 s
+[34m[time][0m High-level decompression throughput: 1.495108 GB/s
+[32m[info][0m Absoluate L_inf error: 3.225106e-02 ([32mSatisified[0m)
+[32m[info][0m MSE: 6.055713e-05
+[32m[info][0m PSNR: 61.2632

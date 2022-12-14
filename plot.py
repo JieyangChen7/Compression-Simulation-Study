@@ -420,10 +420,10 @@ def plot_io_time_vs_datasize():
     x_ticks.append("{:.2f}".format(data_size64[i]/1000) + "TB")
   ax.set_xticks(x_idx+width)
   ax.set_xticklabels(x_ticks)
-  ax.set_xlabel("Data Size (XGC data)")
+  ax.set_xlabel("Total Data Size (XGC data)")
   ax.set_yticks(y_idx)
   ax.set_yscale('linear')
-  ax.set_title('384 NVIDIA V100 GPUs + 384 ADIOS2 Writers')
+  ax.set_title('64 Nodes')
   ax.set_ylabel('Total I/O Time (s)')
   ax.grid(which='major', axis='y')
   lgd = fig.legend(loc = 'center', bbox_to_anchor=(0.13, 0.5, 0.5, 0.5))
@@ -484,13 +484,13 @@ def plot_io_time_vs_scale():
                           io_time64[6][size_idx],
                           ]
   p2 = ax.bar(x_idx+width*2, io_time_comp_write, width, color = 'cyan')
-  x_ticks = ['6', '12', '24', '48', '96', '192', '384']
+  x_ticks = ['1', '2', '4', '8', '16', '32', '64']
   ax.set_xticks(x_idx+width)
   ax.set_xticklabels(x_ticks)
-  ax.set_xlabel("Number of GPUs (ADIOS2 writer/reads)")
+  ax.set_xlabel("Number of Nodes")
   ax.set_yticks(y_idx)
   ax.set_yscale('linear')
-  ax.set_title("{:.0f} GB per GPU (MPI rank)".format(data_size1[size_idx]))
+  ax.set_title("{:.0f} GB per Node (MPI rank)".format(data_size1_1[size_idx]*6))
   ax.set_ylabel('Total I/O Time (s)')
   ax.grid(which='major', axis='y')
   lgd = fig.legend(loc = 'center', bbox_to_anchor=(0.13, 0.5, 0.5, 0.5))

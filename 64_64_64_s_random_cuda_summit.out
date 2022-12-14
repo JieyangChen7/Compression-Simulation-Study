@@ -1,0 +1,520 @@
+[32m[info][0m mode: compression
+[32m[info][0m original data: random
+[32m[info][0m compressed data: /gpfs/alpine/proj-shared/csc143/jieyang/data/512x512x512/velocity_x.dat.mgard
+[32m[info][0m data type: Single precision
+[32m[info][0m error bound mode: Absolute
+[32m[info][0m error bound: 1.000000e+00
+[32m[info][0m s: inf
+[32m[info][0m lossless: Huffman
+[32m[info][0m device type: CUDA
+[32m[info][0m Verbose: enabled
+[32m[info][0m Using 1 devices.
+[32m[info][0m Estimated memory usage: 0.015784GB, Available: 16.000000GB
+[32m[info][0m DomainDecomposer: no decomposition used
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.001539 s
+[32m[info][0m Compressing subdomain 0 with shape: 64 64 64 
+[32m[info][0m Select device: Tesla V100-SXM2-16GB
+[34m[time][0m Decomposition time: 0.000361 s
+[34m[time][0m Decomposition throughput: 2.901781 GB/s
+[34m[time][0m Quantization time: 0.000034 s
+[34m[time][0m Quantization throughput: 30.512018 GB/s
+[32m[info][0m Outlier ratio: 0/262144 (0.000000%)
+[32m[info][0m Huffman block size: 20480
+[32m[info][0m Huffman dictionary size: 8192
+[32m[info][0m Huffman compress ratio: 1048576/258848 (4.050933)
+[34m[time][0m Huffman compress time: 0.004681 s
+[34m[time][0m Low-level compression time: 0.005130 s
+[34m[time][0m Low-level compression throughput: 0.204403 GB/s
+[34m[time][0m Compress single subdomain time: 0.027662 s
+[34m[time][0m Aggregated low-level compression time: 0.033567 s
+[34m[time][0m Aggregated low-level compression throughput: 0.031238 GB/s
+[34m[time][0m Serialization time: 0.001657 s
+[34m[time][0m High-level compression time: 0.037679 s
+[34m[time][0m High-level compression throughput: 0.027829 GB/s
+[32m[info][0m Compression ratio: 4.04942
+[32m[info][0m Using 1 devices.
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.000014 s
+[32m[info][0m DomainDecomposer: no decomposition used
+[34m[time][0m Deserialization time: 0.000014 s
+[32m[info][0m Decompressing subdomain 0 with shape: 64 64 64 
+[32m[info][0m Select device: Tesla V100-SXM2-16GB
+[34m[time][0m Huffman decompress time: 0.017367 s
+[34m[time][0m Dequantization time: 0.000026 s
+[34m[time][0m Dequantization throughput: 40.465249 GB/s
+[34m[time][0m Recomposition time: 0.000370 s
+[34m[time][0m Recomposition throughput: 2.830295 GB/s
+[34m[time][0m Low-level decompression time: 0.017839 s
+[34m[time][0m Low-level decompression throughput: 0.058780 GB/s
+[34m[time][0m Decompress single subdomain time: 0.040054 s
+[34m[time][0m Aggregated low-level decompression time: 0.045894 s
+[34m[time][0m Aggregated low-level decompression throughput: 0.022848 GB/s
+[34m[time][0m High-level decompression time: 0.046139 s
+[34m[time][0m High-level decompression throughput: 0.022726 GB/s
+[32m[info][0m Absoluate L_inf error: 3.234482e-02 ([32mSatisified[0m)
+[32m[info][0m MSE: 6.358411e-05
+[32m[info][0m PSNR: 61.0514
+[32m[info][0m Using 1 devices.
+[32m[info][0m Estimated memory usage: 0.015784GB, Available: 16.000000GB
+[32m[info][0m DomainDecomposer: no decomposition used
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.001608 s
+[32m[info][0m Compressing subdomain 0 with shape: 64 64 64 
+[32m[info][0m Select device: Tesla V100-SXM2-16GB
+[34m[time][0m Decomposition time: 0.000351 s
+[34m[time][0m Decomposition throughput: 2.990881 GB/s
+[34m[time][0m Quantization time: 0.000044 s
+[34m[time][0m Quantization throughput: 23.661875 GB/s
+[32m[info][0m Outlier ratio: 0/262144 (0.000000%)
+[32m[info][0m Huffman block size: 20480
+[32m[info][0m Huffman dictionary size: 8192
+[32m[info][0m Huffman compress ratio: 1048576/258848 (4.050933)
+[34m[time][0m Huffman compress time: 0.004491 s
+[34m[time][0m Low-level compression time: 0.004934 s
+[34m[time][0m Low-level compression throughput: 0.212510 GB/s
+[34m[time][0m Compress single subdomain time: 0.027226 s
+[34m[time][0m Aggregated low-level compression time: 0.033122 s
+[34m[time][0m Aggregated low-level compression throughput: 0.031658 GB/s
+[34m[time][0m Serialization time: 0.001654 s
+[34m[time][0m High-level compression time: 0.037235 s
+[34m[time][0m High-level compression throughput: 0.028161 GB/s
+[32m[info][0m Compression ratio: 4.04942
+[32m[info][0m Using 1 devices.
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.000014 s
+[32m[info][0m DomainDecomposer: no decomposition used
+[34m[time][0m Deserialization time: 0.000014 s
+[32m[info][0m Decompressing subdomain 0 with shape: 64 64 64 
+[32m[info][0m Select device: Tesla V100-SXM2-16GB
+[34m[time][0m Huffman decompress time: 0.017365 s
+[34m[time][0m Dequantization time: 0.000025 s
+[34m[time][0m Dequantization throughput: 41.535987 GB/s
+[34m[time][0m Recomposition time: 0.000369 s
+[34m[time][0m Recomposition throughput: 2.844707 GB/s
+[34m[time][0m Low-level decompression time: 0.017836 s
+[34m[time][0m Low-level decompression throughput: 0.058788 GB/s
+[34m[time][0m Decompress single subdomain time: 0.040200 s
+[34m[time][0m Aggregated low-level decompression time: 0.046069 s
+[34m[time][0m Aggregated low-level decompression throughput: 0.022761 GB/s
+[34m[time][0m High-level decompression time: 0.046310 s
+[34m[time][0m High-level decompression throughput: 0.022642 GB/s
+[32m[info][0m Absoluate L_inf error: 3.234482e-02 ([32mSatisified[0m)
+[32m[info][0m MSE: 6.358411e-05
+[32m[info][0m PSNR: 61.0514
+[32m[info][0m Using 1 devices.
+[32m[info][0m Estimated memory usage: 0.015784GB, Available: 16.000000GB
+[32m[info][0m DomainDecomposer: no decomposition used
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.001606 s
+[32m[info][0m Compressing subdomain 0 with shape: 64 64 64 
+[32m[info][0m Select device: Tesla V100-SXM2-16GB
+[34m[time][0m Decomposition time: 0.000354 s
+[34m[time][0m Decomposition throughput: 2.963754 GB/s
+[34m[time][0m Quantization time: 0.000033 s
+[34m[time][0m Quantization throughput: 31.404834 GB/s
+[32m[info][0m Outlier ratio: 0/262144 (0.000000%)
+[32m[info][0m Huffman block size: 20480
+[32m[info][0m Huffman dictionary size: 8192
+[32m[info][0m Huffman compress ratio: 1048576/258848 (4.050933)
+[34m[time][0m Huffman compress time: 0.004476 s
+[34m[time][0m Low-level compression time: 0.004913 s
+[34m[time][0m Low-level compression throughput: 0.213434 GB/s
+[34m[time][0m Compress single subdomain time: 0.027257 s
+[34m[time][0m Aggregated low-level compression time: 0.033159 s
+[34m[time][0m Aggregated low-level compression throughput: 0.031622 GB/s
+[34m[time][0m Serialization time: 0.001670 s
+[34m[time][0m High-level compression time: 0.037318 s
+[34m[time][0m High-level compression throughput: 0.028098 GB/s
+[32m[info][0m Compression ratio: 4.04942
+[32m[info][0m Using 1 devices.
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.000014 s
+[32m[info][0m DomainDecomposer: no decomposition used
+[34m[time][0m Deserialization time: 0.000014 s
+[32m[info][0m Decompressing subdomain 0 with shape: 64 64 64 
+[32m[info][0m Select device: Tesla V100-SXM2-16GB
+[34m[time][0m Huffman decompress time: 0.017359 s
+[34m[time][0m Dequantization time: 0.000025 s
+[34m[time][0m Dequantization throughput: 41.359050 GB/s
+[34m[time][0m Recomposition time: 0.000369 s
+[34m[time][0m Recomposition throughput: 2.839638 GB/s
+[34m[time][0m Low-level decompression time: 0.017829 s
+[34m[time][0m Low-level decompression throughput: 0.058812 GB/s
+[34m[time][0m Decompress single subdomain time: 0.040152 s
+[34m[time][0m Aggregated low-level decompression time: 0.046032 s
+[34m[time][0m Aggregated low-level decompression throughput: 0.022779 GB/s
+[34m[time][0m High-level decompression time: 0.046272 s
+[34m[time][0m High-level decompression throughput: 0.022661 GB/s
+[32m[info][0m Absoluate L_inf error: 3.234482e-02 ([32mSatisified[0m)
+[32m[info][0m MSE: 6.358411e-05
+[32m[info][0m PSNR: 61.0514
+[32m[info][0m Using 1 devices.
+[32m[info][0m Estimated memory usage: 0.015784GB, Available: 16.000000GB
+[32m[info][0m DomainDecomposer: no decomposition used
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.001612 s
+[32m[info][0m Compressing subdomain 0 with shape: 64 64 64 
+[32m[info][0m Select device: Tesla V100-SXM2-16GB
+[34m[time][0m Decomposition time: 0.000350 s
+[34m[time][0m Decomposition throughput: 2.991675 GB/s
+[34m[time][0m Quantization time: 0.000033 s
+[34m[time][0m Quantization throughput: 31.323217 GB/s
+[32m[info][0m Outlier ratio: 0/262144 (0.000000%)
+[32m[info][0m Huffman block size: 20480
+[32m[info][0m Huffman dictionary size: 8192
+[32m[info][0m Huffman compress ratio: 1048576/258848 (4.050933)
+[34m[time][0m Huffman compress time: 0.004500 s
+[34m[time][0m Low-level compression time: 0.004929 s
+[34m[time][0m Low-level compression throughput: 0.212723 GB/s
+[34m[time][0m Compress single subdomain time: 0.027053 s
+[34m[time][0m Aggregated low-level compression time: 0.032928 s
+[34m[time][0m Aggregated low-level compression throughput: 0.031845 GB/s
+[34m[time][0m Serialization time: 0.001675 s
+[34m[time][0m High-level compression time: 0.037071 s
+[34m[time][0m High-level compression throughput: 0.028285 GB/s
+[32m[info][0m Compression ratio: 4.04942
+[32m[info][0m Using 1 devices.
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.000013 s
+[32m[info][0m DomainDecomposer: no decomposition used
+[34m[time][0m Deserialization time: 0.000014 s
+[32m[info][0m Decompressing subdomain 0 with shape: 64 64 64 
+[32m[info][0m Select device: Tesla V100-SXM2-16GB
+[34m[time][0m Huffman decompress time: 0.017359 s
+[34m[time][0m Dequantization time: 0.000024 s
+[34m[time][0m Dequantization throughput: 43.932294 GB/s
+[34m[time][0m Recomposition time: 0.000370 s
+[34m[time][0m Recomposition throughput: 2.835652 GB/s
+[34m[time][0m Low-level decompression time: 0.017822 s
+[34m[time][0m Low-level decompression throughput: 0.058837 GB/s
+[34m[time][0m Decompress single subdomain time: 0.040067 s
+[34m[time][0m Aggregated low-level decompression time: 0.045868 s
+[34m[time][0m Aggregated low-level decompression throughput: 0.022861 GB/s
+[34m[time][0m High-level decompression time: 0.046107 s
+[34m[time][0m High-level decompression throughput: 0.022742 GB/s
+[32m[info][0m Absoluate L_inf error: 3.234482e-02 ([32mSatisified[0m)
+[32m[info][0m MSE: 6.358411e-05
+[32m[info][0m PSNR: 61.0514
+[32m[info][0m Using 1 devices.
+[32m[info][0m Estimated memory usage: 0.015784GB, Available: 16.000000GB
+[32m[info][0m DomainDecomposer: no decomposition used
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.001597 s
+[32m[info][0m Compressing subdomain 0 with shape: 64 64 64 
+[32m[info][0m Select device: Tesla V100-SXM2-16GB
+[34m[time][0m Decomposition time: 0.000348 s
+[34m[time][0m Decomposition throughput: 3.016200 GB/s
+[34m[time][0m Quantization time: 0.000033 s
+[34m[time][0m Quantization throughput: 31.340068 GB/s
+[32m[info][0m Outlier ratio: 0/262144 (0.000000%)
+[32m[info][0m Huffman block size: 20480
+[32m[info][0m Huffman dictionary size: 8192
+[32m[info][0m Huffman compress ratio: 1048576/258848 (4.050933)
+[34m[time][0m Huffman compress time: 0.004479 s
+[34m[time][0m Low-level compression time: 0.004905 s
+[34m[time][0m Low-level compression throughput: 0.213772 GB/s
+[34m[time][0m Compress single subdomain time: 0.026990 s
+[34m[time][0m Aggregated low-level compression time: 0.032780 s
+[34m[time][0m Aggregated low-level compression throughput: 0.031988 GB/s
+[34m[time][0m Serialization time: 0.001646 s
+[34m[time][0m High-level compression time: 0.036820 s
+[34m[time][0m High-level compression throughput: 0.028478 GB/s
+[32m[info][0m Compression ratio: 4.04942
+[32m[info][0m Using 1 devices.
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.000013 s
+[32m[info][0m DomainDecomposer: no decomposition used
+[34m[time][0m Deserialization time: 0.000016 s
+[32m[info][0m Decompressing subdomain 0 with shape: 64 64 64 
+[32m[info][0m Select device: Tesla V100-SXM2-16GB
+[34m[time][0m Huffman decompress time: 0.017391 s
+[34m[time][0m Dequantization time: 0.000028 s
+[34m[time][0m Dequantization throughput: 37.421077 GB/s
+[34m[time][0m Recomposition time: 0.000378 s
+[34m[time][0m Recomposition throughput: 2.776662 GB/s
+[34m[time][0m Low-level decompression time: 0.017876 s
+[34m[time][0m Low-level decompression throughput: 0.058657 GB/s
+[34m[time][0m Decompress single subdomain time: 0.042338 s
+[34m[time][0m Aggregated low-level decompression time: 0.049273 s
+[34m[time][0m Aggregated low-level decompression throughput: 0.021281 GB/s
+[34m[time][0m High-level decompression time: 0.049519 s
+[34m[time][0m High-level decompression throughput: 0.021175 GB/s
+[32m[info][0m Absoluate L_inf error: 3.234482e-02 ([32mSatisified[0m)
+[32m[info][0m MSE: 6.358411e-05
+[32m[info][0m PSNR: 61.0514
+[32m[info][0m Using 1 devices.
+[32m[info][0m Estimated memory usage: 0.015784GB, Available: 16.000000GB
+[32m[info][0m DomainDecomposer: no decomposition used
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.001884 s
+[32m[info][0m Compressing subdomain 0 with shape: 64 64 64 
+[32m[info][0m Select device: Tesla V100-SXM2-16GB
+[34m[time][0m Decomposition time: 0.000348 s
+[34m[time][0m Decomposition throughput: 3.015541 GB/s
+[34m[time][0m Quantization time: 0.000033 s
+[34m[time][0m Quantization throughput: 31.396371 GB/s
+[32m[info][0m Outlier ratio: 0/262144 (0.000000%)
+[32m[info][0m Huffman block size: 20480
+[32m[info][0m Huffman dictionary size: 8192
+[32m[info][0m Huffman compress ratio: 1048576/258848 (4.050933)
+[34m[time][0m Huffman compress time: 0.004476 s
+[34m[time][0m Low-level compression time: 0.004903 s
+[34m[time][0m Low-level compression throughput: 0.213878 GB/s
+[34m[time][0m Compress single subdomain time: 0.030718 s
+[34m[time][0m Aggregated low-level compression time: 0.036540 s
+[34m[time][0m Aggregated low-level compression throughput: 0.028697 GB/s
+[34m[time][0m Serialization time: 0.001662 s
+[34m[time][0m High-level compression time: 0.041048 s
+[34m[time][0m High-level compression throughput: 0.025545 GB/s
+[32m[info][0m Compression ratio: 4.04942
+[32m[info][0m Using 1 devices.
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.000013 s
+[32m[info][0m DomainDecomposer: no decomposition used
+[34m[time][0m Deserialization time: 0.000014 s
+[32m[info][0m Decompressing subdomain 0 with shape: 64 64 64 
+[32m[info][0m Select device: Tesla V100-SXM2-16GB
+[34m[time][0m Huffman decompress time: 0.017405 s
+[34m[time][0m Dequantization time: 0.000030 s
+[34m[time][0m Dequantization throughput: 34.575659 GB/s
+[34m[time][0m Recomposition time: 0.000390 s
+[34m[time][0m Recomposition throughput: 2.689870 GB/s
+[34m[time][0m Low-level decompression time: 0.017927 s
+[34m[time][0m Low-level decompression throughput: 0.058491 GB/s
+[34m[time][0m Decompress single subdomain time: 0.040929 s
+[34m[time][0m Aggregated low-level decompression time: 0.049009 s
+[34m[time][0m Aggregated low-level decompression throughput: 0.021396 GB/s
+[34m[time][0m High-level decompression time: 0.049256 s
+[34m[time][0m High-level decompression throughput: 0.021288 GB/s
+[32m[info][0m Absoluate L_inf error: 3.234482e-02 ([32mSatisified[0m)
+[32m[info][0m MSE: 6.358411e-05
+[32m[info][0m PSNR: 61.0514
+[32m[info][0m Using 1 devices.
+[32m[info][0m Estimated memory usage: 0.015784GB, Available: 16.000000GB
+[32m[info][0m DomainDecomposer: no decomposition used
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.001665 s
+[32m[info][0m Compressing subdomain 0 with shape: 64 64 64 
+[32m[info][0m Select device: Tesla V100-SXM2-16GB
+[34m[time][0m Decomposition time: 0.000361 s
+[34m[time][0m Decomposition throughput: 2.903959 GB/s
+[34m[time][0m Quantization time: 0.000034 s
+[34m[time][0m Quantization throughput: 30.463264 GB/s
+[32m[info][0m Outlier ratio: 0/262144 (0.000000%)
+[32m[info][0m Huffman block size: 20480
+[32m[info][0m Huffman dictionary size: 8192
+[32m[info][0m Huffman compress ratio: 1048576/258848 (4.050933)
+[34m[time][0m Huffman compress time: 0.004478 s
+[34m[time][0m Low-level compression time: 0.004923 s
+[34m[time][0m Low-level compression throughput: 0.212989 GB/s
+[34m[time][0m Compress single subdomain time: 0.027923 s
+[34m[time][0m Aggregated low-level compression time: 0.033834 s
+[34m[time][0m Aggregated low-level compression throughput: 0.030992 GB/s
+[34m[time][0m Serialization time: 0.001660 s
+[34m[time][0m High-level compression time: 0.038062 s
+[34m[time][0m High-level compression throughput: 0.027549 GB/s
+[32m[info][0m Compression ratio: 4.04942
+[32m[info][0m Using 1 devices.
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.000013 s
+[32m[info][0m DomainDecomposer: no decomposition used
+[34m[time][0m Deserialization time: 0.000014 s
+[32m[info][0m Decompressing subdomain 0 with shape: 64 64 64 
+[32m[info][0m Select device: Tesla V100-SXM2-16GB
+[34m[time][0m Huffman decompress time: 0.017361 s
+[34m[time][0m Dequantization time: 0.000028 s
+[34m[time][0m Dequantization throughput: 36.933394 GB/s
+[34m[time][0m Recomposition time: 0.000369 s
+[34m[time][0m Recomposition throughput: 2.841361 GB/s
+[34m[time][0m Low-level decompression time: 0.017827 s
+[34m[time][0m Low-level decompression throughput: 0.058821 GB/s
+[34m[time][0m Decompress single subdomain time: 0.039921 s
+[34m[time][0m Aggregated low-level decompression time: 0.045699 s
+[34m[time][0m Aggregated low-level decompression throughput: 0.022945 GB/s
+[34m[time][0m High-level decompression time: 0.045939 s
+[34m[time][0m High-level decompression throughput: 0.022826 GB/s
+[32m[info][0m Absoluate L_inf error: 3.234482e-02 ([32mSatisified[0m)
+[32m[info][0m MSE: 6.358411e-05
+[32m[info][0m PSNR: 61.0514
+[32m[info][0m Using 1 devices.
+[32m[info][0m Estimated memory usage: 0.015784GB, Available: 16.000000GB
+[32m[info][0m DomainDecomposer: no decomposition used
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.001601 s
+[32m[info][0m Compressing subdomain 0 with shape: 64 64 64 
+[32m[info][0m Select device: Tesla V100-SXM2-16GB
+[34m[time][0m Decomposition time: 0.000348 s
+[34m[time][0m Decomposition throughput: 3.011211 GB/s
+[34m[time][0m Quantization time: 0.000033 s
+[34m[time][0m Quantization throughput: 31.590275 GB/s
+[32m[info][0m Outlier ratio: 0/262144 (0.000000%)
+[32m[info][0m Huffman block size: 20480
+[32m[info][0m Huffman dictionary size: 8192
+[32m[info][0m Huffman compress ratio: 1048576/258848 (4.050933)
+[34m[time][0m Huffman compress time: 0.004473 s
+[34m[time][0m Low-level compression time: 0.004899 s
+[34m[time][0m Low-level compression throughput: 0.214031 GB/s
+[34m[time][0m Compress single subdomain time: 0.026936 s
+[34m[time][0m Aggregated low-level compression time: 0.032784 s
+[34m[time][0m Aggregated low-level compression throughput: 0.031985 GB/s
+[34m[time][0m Serialization time: 0.001650 s
+[34m[time][0m High-level compression time: 0.036868 s
+[34m[time][0m High-level compression throughput: 0.028441 GB/s
+[32m[info][0m Compression ratio: 4.04942
+[32m[info][0m Using 1 devices.
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.000013 s
+[32m[info][0m DomainDecomposer: no decomposition used
+[34m[time][0m Deserialization time: 0.000014 s
+[32m[info][0m Decompressing subdomain 0 with shape: 64 64 64 
+[32m[info][0m Select device: Tesla V100-SXM2-16GB
+[34m[time][0m Huffman decompress time: 0.017373 s
+[34m[time][0m Dequantization time: 0.000025 s
+[34m[time][0m Dequantization throughput: 42.298346 GB/s
+[34m[time][0m Recomposition time: 0.000368 s
+[34m[time][0m Recomposition throughput: 2.845741 GB/s
+[34m[time][0m Low-level decompression time: 0.017835 s
+[34m[time][0m Low-level decompression throughput: 0.058793 GB/s
+[34m[time][0m Decompress single subdomain time: 0.039996 s
+[34m[time][0m Aggregated low-level decompression time: 0.045830 s
+[34m[time][0m Aggregated low-level decompression throughput: 0.022880 GB/s
+[34m[time][0m High-level decompression time: 0.046074 s
+[34m[time][0m High-level decompression throughput: 0.022759 GB/s
+[32m[info][0m Absoluate L_inf error: 3.234482e-02 ([32mSatisified[0m)
+[32m[info][0m MSE: 6.358411e-05
+[32m[info][0m PSNR: 61.0514
+[32m[info][0m Using 1 devices.
+[32m[info][0m Estimated memory usage: 0.015784GB, Available: 16.000000GB
+[32m[info][0m DomainDecomposer: no decomposition used
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.001634 s
+[32m[info][0m Compressing subdomain 0 with shape: 64 64 64 
+[32m[info][0m Select device: Tesla V100-SXM2-16GB
+[34m[time][0m Decomposition time: 0.000348 s
+[34m[time][0m Decomposition throughput: 3.010960 GB/s
+[34m[time][0m Quantization time: 0.000040 s
+[34m[time][0m Quantization throughput: 25.931744 GB/s
+[32m[info][0m Outlier ratio: 0/262144 (0.000000%)
+[32m[info][0m Huffman block size: 20480
+[32m[info][0m Huffman dictionary size: 8192
+[32m[info][0m Huffman compress ratio: 1048576/258848 (4.050933)
+[34m[time][0m Huffman compress time: 0.004474 s
+[34m[time][0m Low-level compression time: 0.004908 s
+[34m[time][0m Low-level compression throughput: 0.213639 GB/s
+[34m[time][0m Compress single subdomain time: 0.027069 s
+[34m[time][0m Aggregated low-level compression time: 0.032946 s
+[34m[time][0m Aggregated low-level compression throughput: 0.031827 GB/s
+[34m[time][0m Serialization time: 0.001651 s
+[34m[time][0m High-level compression time: 0.037055 s
+[34m[time][0m High-level compression throughput: 0.028298 GB/s
+[32m[info][0m Compression ratio: 4.04942
+[32m[info][0m Using 1 devices.
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.000013 s
+[32m[info][0m DomainDecomposer: no decomposition used
+[34m[time][0m Deserialization time: 0.000016 s
+[32m[info][0m Decompressing subdomain 0 with shape: 64 64 64 
+[32m[info][0m Select device: Tesla V100-SXM2-16GB
+[34m[time][0m Huffman decompress time: 0.017367 s
+[34m[time][0m Dequantization time: 0.000025 s
+[34m[time][0m Dequantization throughput: 41.455523 GB/s
+[34m[time][0m Recomposition time: 0.000369 s
+[34m[time][0m Recomposition throughput: 2.842101 GB/s
+[34m[time][0m Low-level decompression time: 0.017834 s
+[34m[time][0m Low-level decompression throughput: 0.058796 GB/s
+[34m[time][0m Decompress single subdomain time: 0.040159 s
+[34m[time][0m Aggregated low-level decompression time: 0.046034 s
+[34m[time][0m Aggregated low-level decompression throughput: 0.022778 GB/s
+[34m[time][0m High-level decompression time: 0.046277 s
+[34m[time][0m High-level decompression throughput: 0.022659 GB/s
+[32m[info][0m Absoluate L_inf error: 3.234482e-02 ([32mSatisified[0m)
+[32m[info][0m MSE: 6.358411e-05
+[32m[info][0m PSNR: 61.0514
+[32m[info][0m Using 1 devices.
+[32m[info][0m Estimated memory usage: 0.015784GB, Available: 16.000000GB
+[32m[info][0m DomainDecomposer: no decomposition used
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.001603 s
+[32m[info][0m Compressing subdomain 0 with shape: 64 64 64 
+[32m[info][0m Select device: Tesla V100-SXM2-16GB
+[34m[time][0m Decomposition time: 0.000349 s
+[34m[time][0m Decomposition throughput: 3.005954 GB/s
+[34m[time][0m Quantization time: 0.000033 s
+[34m[time][0m Quantization throughput: 31.595034 GB/s
+[32m[info][0m Outlier ratio: 0/262144 (0.000000%)
+[32m[info][0m Huffman block size: 20480
+[32m[info][0m Huffman dictionary size: 8192
+[32m[info][0m Huffman compress ratio: 1048576/258848 (4.050933)
+[34m[time][0m Huffman compress time: 0.004495 s
+[34m[time][0m Low-level compression time: 0.004923 s
+[34m[time][0m Low-level compression throughput: 0.213010 GB/s
+[34m[time][0m Compress single subdomain time: 0.027237 s
+[34m[time][0m Aggregated low-level compression time: 0.033060 s
+[34m[time][0m Aggregated low-level compression throughput: 0.031717 GB/s
+[34m[time][0m Serialization time: 0.001653 s
+[34m[time][0m High-level compression time: 0.037138 s
+[34m[time][0m High-level compression throughput: 0.028234 GB/s
+[32m[info][0m Compression ratio: 4.04942
+[32m[info][0m Using 1 devices.
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.000013 s
+[32m[info][0m DomainDecomposer: no decomposition used
+[34m[time][0m Deserialization time: 0.000014 s
+[32m[info][0m Decompressing subdomain 0 with shape: 64 64 64 
+[32m[info][0m Select device: Tesla V100-SXM2-16GB
+[34m[time][0m Huffman decompress time: 0.017361 s
+[34m[time][0m Dequantization time: 0.000024 s
+[34m[time][0m Dequantization throughput: 43.473300 GB/s
+[34m[time][0m Recomposition time: 0.000371 s
+[34m[time][0m Recomposition throughput: 2.828378 GB/s
+[34m[time][0m Low-level decompression time: 0.017827 s
+[34m[time][0m Low-level decompression throughput: 0.058820 GB/s
+[34m[time][0m Decompress single subdomain time: 0.040042 s
+[34m[time][0m Aggregated low-level decompression time: 0.045920 s
+[34m[time][0m Aggregated low-level decompression throughput: 0.022835 GB/s
+[34m[time][0m High-level decompression time: 0.046160 s
+[34m[time][0m High-level decompression throughput: 0.022716 GB/s
+[32m[info][0m Absoluate L_inf error: 3.234482e-02 ([32mSatisified[0m)
+[32m[info][0m MSE: 6.358411e-05
+[32m[info][0m PSNR: 61.0514

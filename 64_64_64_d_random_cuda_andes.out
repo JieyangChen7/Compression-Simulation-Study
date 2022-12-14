@@ -1,0 +1,25 @@
+[32m[info][0m mode: compression
+[32m[info][0m original data: random
+[32m[info][0m compressed data: /gpfs/alpine/proj-shared/csc143/jieyang/data/512x512x512/velocity_x.dat.mgard
+[32m[info][0m data type: Double precision
+[32m[info][0m error bound mode: Absolute
+[32m[info][0m error bound: 1.000000e+00
+[32m[info][0m s: inf
+[32m[info][0m lossless: Huffman
+[32m[info][0m device type: CUDA
+[32m[info][0m Verbose: enabled
+[32m[info][0m Using 1 devices.
+[32m[info][0m Estimated memory usage: 0.019345GB, Available: 11.928273GB
+[32m[info][0m DomainDecomposer: no decomposition used
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 1
+[32m[info][0m Output previously pinned: 1
+[34m[time][0m Prepare input and output buffer time: 0.001253 s
+[32m[info][0m Compressing subdomain 0 with shape: 64 64 64 
+[32m[info][0m Select device: Tesla K80
+[34m[time][0m Decomposition time: 0.001597 s
+[34m[time][0m Decomposition throughput: 1.313124 GB/s
+[34m[time][0m Quantization time: 0.000181 s
+[34m[time][0m Quantization throughput: 11.556021 GB/s
+[32m[info][0m Outlier ratio: 0/262144 (0.000000%)
+[31m[ERR][0m  operation not supported while executing generate codeword length with CUDA (Async-check)

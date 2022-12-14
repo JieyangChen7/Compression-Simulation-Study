@@ -1,0 +1,520 @@
+[32m[info][0m mode: compression
+[32m[info][0m original data: random
+[32m[info][0m compressed data: random.mgard
+[32m[info][0m data type: Single precision
+[32m[info][0m error bound mode: Absolute
+[32m[info][0m error bound: 1.000000e+00
+[32m[info][0m s: inf
+[32m[info][0m lossless: Huffman
+[32m[info][0m device type: SYCL
+[32m[info][0m Verbose: enabled
+[32m[info][0m Using 1 devices.
+[32m[info][0m Estimated memory usage: 4.304937GB, Available: 16.000000GB
+[32m[info][0m DomainDecomposer: no decomposition used
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 0
+[32m[info][0m Output previously pinned: 0
+[34m[time][0m Prepare input and output buffer time: 0.008620 s
+[32m[info][0m Compressing subdomain 0 with shape: 512 512 512 
+[32m[info][0m Select device: Intel(R) UHD Graphics P630 [0x3e96]
+[34m[time][0m Decomposition time: 1.583423 s
+[34m[time][0m Decomposition throughput: 0.339057 GB/s
+[34m[time][0m Quantization time: 2.220984 s
+[34m[time][0m Quantization throughput: 0.241727 GB/s
+[32m[info][0m Outlier ratio: 16974078/134217728 (12.646674%)
+[32m[info][0m Huffman block size: 20480
+[32m[info][0m Huffman dictionary size: 8192
+[32m[info][0m Huffman compress ratio: 536870912/301821280 (1.778771)
+[34m[time][0m Huffman compress time: 1.614044 s
+[34m[time][0m Low-level compression time: 5.418760 s
+[34m[time][0m Low-level compression throughput: 0.099076 GB/s
+[34m[time][0m Compress single subdomain time: 6.391724 s
+[34m[time][0m Aggregated low-level compression time: 6.394265 s
+[34m[time][0m Aggregated low-level compression throughput: 0.083961 GB/s
+[34m[time][0m Serialization time: 0.006309 s
+[34m[time][0m High-level compression time: 6.409415 s
+[34m[time][0m High-level compression throughput: 0.083763 GB/s
+[32m[info][0m Compression ratio: 1.77877
+[32m[info][0m Using 1 devices.
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 0
+[32m[info][0m Output previously pinned: 0
+[34m[time][0m Prepare input and output buffer time: 0.000010 s
+[32m[info][0m DomainDecomposer: no decomposition used
+[34m[time][0m Deserialization time: 0.000093 s
+[32m[info][0m Decompressing subdomain 0 with shape: 512 512 512 
+[32m[info][0m Select device: Intel(R) UHD Graphics P630 [0x3e96]
+[34m[time][0m Huffman decompress time: 1.638569 s
+[34m[time][0m Dequantization time: 0.571484 s
+[34m[time][0m Dequantization throughput: 0.939433 GB/s
+[34m[time][0m Recomposition time: 1.360977 s
+[34m[time][0m Recomposition throughput: 0.394475 GB/s
+[34m[time][0m Low-level decompression time: 3.571520 s
+[34m[time][0m Low-level decompression throughput: 0.150320 GB/s
+[34m[time][0m Decompress single subdomain time: 4.535436 s
+[34m[time][0m Aggregated low-level decompression time: 4.537983 s
+[34m[time][0m Aggregated low-level decompression throughput: 0.118306 GB/s
+[34m[time][0m High-level decompression time: 4.539668 s
+[34m[time][0m High-level decompression throughput: 0.118262 GB/s
+[32m[info][0m Absoluate L_inf error: 0.000000e+00 ([32mSatisified[0m)
+[32m[info][0m MSE: -nan
+[32m[info][0m PSNR: -nan
+[32m[info][0m Using 1 devices.
+[32m[info][0m Estimated memory usage: 4.304937GB, Available: 16.000000GB
+[32m[info][0m DomainDecomposer: no decomposition used
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 0
+[32m[info][0m Output previously pinned: 0
+[34m[time][0m Prepare input and output buffer time: 0.006639 s
+[32m[info][0m Compressing subdomain 0 with shape: 512 512 512 
+[32m[info][0m Select device: Intel(R) UHD Graphics P630 [0x3e96]
+[34m[time][0m Decomposition time: 1.581386 s
+[34m[time][0m Decomposition throughput: 0.339494 GB/s
+[34m[time][0m Quantization time: 2.206847 s
+[34m[time][0m Quantization throughput: 0.243275 GB/s
+[32m[info][0m Outlier ratio: 16974078/134217728 (12.646674%)
+[32m[info][0m Huffman block size: 20480
+[32m[info][0m Huffman dictionary size: 8192
+[32m[info][0m Huffman compress ratio: 536870912/301821280 (1.778771)
+[34m[time][0m Huffman compress time: 1.647263 s
+[34m[time][0m Low-level compression time: 5.435800 s
+[34m[time][0m Low-level compression throughput: 0.098766 GB/s
+[34m[time][0m Compress single subdomain time: 6.405291 s
+[34m[time][0m Aggregated low-level compression time: 6.407914 s
+[34m[time][0m Aggregated low-level compression throughput: 0.083782 GB/s
+[34m[time][0m Serialization time: 0.007011 s
+[34m[time][0m High-level compression time: 6.421674 s
+[34m[time][0m High-level compression throughput: 0.083603 GB/s
+[32m[info][0m Compression ratio: 1.77877
+[32m[info][0m Using 1 devices.
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 0
+[32m[info][0m Output previously pinned: 0
+[34m[time][0m Prepare input and output buffer time: 0.000030 s
+[32m[info][0m DomainDecomposer: no decomposition used
+[34m[time][0m Deserialization time: 0.000102 s
+[32m[info][0m Decompressing subdomain 0 with shape: 512 512 512 
+[32m[info][0m Select device: Intel(R) UHD Graphics P630 [0x3e96]
+[34m[time][0m Huffman decompress time: 1.631993 s
+[34m[time][0m Dequantization time: 0.571788 s
+[34m[time][0m Dequantization throughput: 0.938934 GB/s
+[34m[time][0m Recomposition time: 1.359099 s
+[34m[time][0m Recomposition throughput: 0.395020 GB/s
+[34m[time][0m Low-level decompression time: 3.563316 s
+[34m[time][0m Low-level decompression throughput: 0.150666 GB/s
+[34m[time][0m Decompress single subdomain time: 4.538793 s
+[34m[time][0m Aggregated low-level decompression time: 4.541354 s
+[34m[time][0m Aggregated low-level decompression throughput: 0.118218 GB/s
+[34m[time][0m High-level decompression time: 4.543415 s
+[34m[time][0m High-level decompression throughput: 0.118165 GB/s
+[32m[info][0m Absoluate L_inf error: 0.000000e+00 ([32mSatisified[0m)
+[32m[info][0m MSE: -nan
+[32m[info][0m PSNR: -nan
+[32m[info][0m Using 1 devices.
+[32m[info][0m Estimated memory usage: 4.304937GB, Available: 16.000000GB
+[32m[info][0m DomainDecomposer: no decomposition used
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 0
+[32m[info][0m Output previously pinned: 0
+[34m[time][0m Prepare input and output buffer time: 0.006725 s
+[32m[info][0m Compressing subdomain 0 with shape: 512 512 512 
+[32m[info][0m Select device: Intel(R) UHD Graphics P630 [0x3e96]
+[34m[time][0m Decomposition time: 1.580054 s
+[34m[time][0m Decomposition throughput: 0.339780 GB/s
+[34m[time][0m Quantization time: 2.225236 s
+[34m[time][0m Quantization throughput: 0.241265 GB/s
+[32m[info][0m Outlier ratio: 16974078/134217728 (12.646674%)
+[32m[info][0m Huffman block size: 20480
+[32m[info][0m Huffman dictionary size: 8192
+[32m[info][0m Huffman compress ratio: 536870912/301821280 (1.778771)
+[34m[time][0m Huffman compress time: 1.628940 s
+[34m[time][0m Low-level compression time: 5.434546 s
+[34m[time][0m Low-level compression throughput: 0.098789 GB/s
+[34m[time][0m Compress single subdomain time: 6.403458 s
+[34m[time][0m Aggregated low-level compression time: 6.406077 s
+[34m[time][0m Aggregated low-level compression throughput: 0.083806 GB/s
+[34m[time][0m Serialization time: 0.006488 s
+[34m[time][0m High-level compression time: 6.419400 s
+[34m[time][0m High-level compression throughput: 0.083633 GB/s
+[32m[info][0m Compression ratio: 1.77877
+[32m[info][0m Using 1 devices.
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 0
+[32m[info][0m Output previously pinned: 0
+[34m[time][0m Prepare input and output buffer time: 0.000011 s
+[32m[info][0m DomainDecomposer: no decomposition used
+[34m[time][0m Deserialization time: 0.000110 s
+[32m[info][0m Decompressing subdomain 0 with shape: 512 512 512 
+[32m[info][0m Select device: Intel(R) UHD Graphics P630 [0x3e96]
+[34m[time][0m Huffman decompress time: 1.631872 s
+[34m[time][0m Dequantization time: 0.570843 s
+[34m[time][0m Dequantization throughput: 0.940488 GB/s
+[34m[time][0m Recomposition time: 1.357867 s
+[34m[time][0m Recomposition throughput: 0.395378 GB/s
+[34m[time][0m Low-level decompression time: 3.561088 s
+[34m[time][0m Low-level decompression throughput: 0.150760 GB/s
+[34m[time][0m Decompress single subdomain time: 4.541275 s
+[34m[time][0m Aggregated low-level decompression time: 4.543920 s
+[34m[time][0m Aggregated low-level decompression throughput: 0.118152 GB/s
+[34m[time][0m High-level decompression time: 4.546405 s
+[34m[time][0m High-level decompression throughput: 0.118087 GB/s
+[32m[info][0m Absoluate L_inf error: 0.000000e+00 ([32mSatisified[0m)
+[32m[info][0m MSE: -nan
+[32m[info][0m PSNR: -nan
+[32m[info][0m Using 1 devices.
+[32m[info][0m Estimated memory usage: 4.304937GB, Available: 16.000000GB
+[32m[info][0m DomainDecomposer: no decomposition used
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 0
+[32m[info][0m Output previously pinned: 0
+[34m[time][0m Prepare input and output buffer time: 0.008827 s
+[32m[info][0m Compressing subdomain 0 with shape: 512 512 512 
+[32m[info][0m Select device: Intel(R) UHD Graphics P630 [0x3e96]
+[34m[time][0m Decomposition time: 1.577110 s
+[34m[time][0m Decomposition throughput: 0.340414 GB/s
+[34m[time][0m Quantization time: 2.197312 s
+[34m[time][0m Quantization throughput: 0.244331 GB/s
+[32m[info][0m Outlier ratio: 16974078/134217728 (12.646674%)
+[32m[info][0m Huffman block size: 20480
+[32m[info][0m Huffman dictionary size: 8192
+[32m[info][0m Huffman compress ratio: 536870912/301821280 (1.778771)
+[34m[time][0m Huffman compress time: 1.643387 s
+[34m[time][0m Low-level compression time: 5.418187 s
+[34m[time][0m Low-level compression throughput: 0.099087 GB/s
+[34m[time][0m Compress single subdomain time: 6.408198 s
+[34m[time][0m Aggregated low-level compression time: 6.410761 s
+[34m[time][0m Aggregated low-level compression throughput: 0.083745 GB/s
+[34m[time][0m Serialization time: 0.007230 s
+[34m[time][0m High-level compression time: 6.426930 s
+[34m[time][0m High-level compression throughput: 0.083535 GB/s
+[32m[info][0m Compression ratio: 1.77877
+[32m[info][0m Using 1 devices.
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 0
+[32m[info][0m Output previously pinned: 0
+[34m[time][0m Prepare input and output buffer time: 0.000011 s
+[32m[info][0m DomainDecomposer: no decomposition used
+[34m[time][0m Deserialization time: 0.000208 s
+[32m[info][0m Decompressing subdomain 0 with shape: 512 512 512 
+[32m[info][0m Select device: Intel(R) UHD Graphics P630 [0x3e96]
+[34m[time][0m Huffman decompress time: 1.634477 s
+[34m[time][0m Dequantization time: 0.571591 s
+[34m[time][0m Dequantization throughput: 0.939257 GB/s
+[34m[time][0m Recomposition time: 1.356884 s
+[34m[time][0m Recomposition throughput: 0.395665 GB/s
+[34m[time][0m Low-level decompression time: 3.563460 s
+[34m[time][0m Low-level decompression throughput: 0.150660 GB/s
+[34m[time][0m Decompress single subdomain time: 4.539572 s
+[34m[time][0m Aggregated low-level decompression time: 4.542143 s
+[34m[time][0m Aggregated low-level decompression throughput: 0.118198 GB/s
+[34m[time][0m High-level decompression time: 4.544601 s
+[34m[time][0m High-level decompression throughput: 0.118134 GB/s
+[32m[info][0m Absoluate L_inf error: 0.000000e+00 ([32mSatisified[0m)
+[32m[info][0m MSE: -nan
+[32m[info][0m PSNR: -nan
+[32m[info][0m Using 1 devices.
+[32m[info][0m Estimated memory usage: 4.304937GB, Available: 16.000000GB
+[32m[info][0m DomainDecomposer: no decomposition used
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 0
+[32m[info][0m Output previously pinned: 0
+[34m[time][0m Prepare input and output buffer time: 0.007572 s
+[32m[info][0m Compressing subdomain 0 with shape: 512 512 512 
+[32m[info][0m Select device: Intel(R) UHD Graphics P630 [0x3e96]
+[34m[time][0m Decomposition time: 1.579589 s
+[34m[time][0m Decomposition throughput: 0.339880 GB/s
+[34m[time][0m Quantization time: 2.248931 s
+[34m[time][0m Quantization throughput: 0.238723 GB/s
+[32m[info][0m Outlier ratio: 16974078/134217728 (12.646674%)
+[32m[info][0m Huffman block size: 20480
+[32m[info][0m Huffman dictionary size: 8192
+[32m[info][0m Huffman compress ratio: 536870912/301821280 (1.778771)
+[34m[time][0m Huffman compress time: 1.647937 s
+[34m[time][0m Low-level compression time: 5.476758 s
+[34m[time][0m Low-level compression throughput: 0.098027 GB/s
+[34m[time][0m Compress single subdomain time: 6.467594 s
+[34m[time][0m Aggregated low-level compression time: 6.470190 s
+[34m[time][0m Aggregated low-level compression throughput: 0.082976 GB/s
+[34m[time][0m Serialization time: 0.006994 s
+[34m[time][0m High-level compression time: 6.484869 s
+[34m[time][0m High-level compression throughput: 0.082788 GB/s
+[32m[info][0m Compression ratio: 1.77877
+[32m[info][0m Using 1 devices.
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 0
+[32m[info][0m Output previously pinned: 0
+[34m[time][0m Prepare input and output buffer time: 0.000014 s
+[32m[info][0m DomainDecomposer: no decomposition used
+[34m[time][0m Deserialization time: 0.000108 s
+[32m[info][0m Decompressing subdomain 0 with shape: 512 512 512 
+[32m[info][0m Select device: Intel(R) UHD Graphics P630 [0x3e96]
+[34m[time][0m Huffman decompress time: 1.635175 s
+[34m[time][0m Dequantization time: 0.571702 s
+[34m[time][0m Dequantization throughput: 0.939074 GB/s
+[34m[time][0m Recomposition time: 1.356551 s
+[34m[time][0m Recomposition throughput: 0.395762 GB/s
+[34m[time][0m Low-level decompression time: 3.563922 s
+[34m[time][0m Low-level decompression throughput: 0.150640 GB/s
+[34m[time][0m Decompress single subdomain time: 4.540989 s
+[34m[time][0m Aggregated low-level decompression time: 4.543659 s
+[34m[time][0m Aggregated low-level decompression throughput: 0.118158 GB/s
+[34m[time][0m High-level decompression time: 4.546058 s
+[34m[time][0m High-level decompression throughput: 0.118096 GB/s
+[32m[info][0m Absoluate L_inf error: 0.000000e+00 ([32mSatisified[0m)
+[32m[info][0m MSE: -nan
+[32m[info][0m PSNR: -nan
+[32m[info][0m Using 1 devices.
+[32m[info][0m Estimated memory usage: 4.304937GB, Available: 16.000000GB
+[32m[info][0m DomainDecomposer: no decomposition used
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 0
+[32m[info][0m Output previously pinned: 0
+[34m[time][0m Prepare input and output buffer time: 0.007639 s
+[32m[info][0m Compressing subdomain 0 with shape: 512 512 512 
+[32m[info][0m Select device: Intel(R) UHD Graphics P630 [0x3e96]
+[34m[time][0m Decomposition time: 1.581518 s
+[34m[time][0m Decomposition throughput: 0.339466 GB/s
+[34m[time][0m Quantization time: 2.206278 s
+[34m[time][0m Quantization throughput: 0.243338 GB/s
+[32m[info][0m Outlier ratio: 16974078/134217728 (12.646674%)
+[32m[info][0m Huffman block size: 20480
+[32m[info][0m Huffman dictionary size: 8192
+[32m[info][0m Huffman compress ratio: 536870912/301821280 (1.778771)
+[34m[time][0m Huffman compress time: 1.646569 s
+[34m[time][0m Low-level compression time: 5.434632 s
+[34m[time][0m Low-level compression throughput: 0.098787 GB/s
+[34m[time][0m Compress single subdomain time: 6.432062 s
+[34m[time][0m Aggregated low-level compression time: 6.434672 s
+[34m[time][0m Aggregated low-level compression throughput: 0.083434 GB/s
+[34m[time][0m Serialization time: 0.006589 s
+[34m[time][0m High-level compression time: 6.449013 s
+[34m[time][0m High-level compression throughput: 0.083249 GB/s
+[32m[info][0m Compression ratio: 1.77877
+[32m[info][0m Using 1 devices.
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 0
+[32m[info][0m Output previously pinned: 0
+[34m[time][0m Prepare input and output buffer time: 0.000010 s
+[32m[info][0m DomainDecomposer: no decomposition used
+[34m[time][0m Deserialization time: 0.000110 s
+[32m[info][0m Decompressing subdomain 0 with shape: 512 512 512 
+[32m[info][0m Select device: Intel(R) UHD Graphics P630 [0x3e96]
+[34m[time][0m Huffman decompress time: 1.633567 s
+[34m[time][0m Dequantization time: 0.571299 s
+[34m[time][0m Dequantization throughput: 0.939737 GB/s
+[34m[time][0m Recomposition time: 1.356913 s
+[34m[time][0m Recomposition throughput: 0.395656 GB/s
+[34m[time][0m Low-level decompression time: 3.562276 s
+[34m[time][0m Low-level decompression throughput: 0.150710 GB/s
+[34m[time][0m Decompress single subdomain time: 4.532752 s
+[34m[time][0m Aggregated low-level decompression time: 4.535387 s
+[34m[time][0m Aggregated low-level decompression throughput: 0.118374 GB/s
+[34m[time][0m High-level decompression time: 4.537323 s
+[34m[time][0m High-level decompression throughput: 0.118323 GB/s
+[32m[info][0m Absoluate L_inf error: 0.000000e+00 ([32mSatisified[0m)
+[32m[info][0m MSE: -nan
+[32m[info][0m PSNR: -nan
+[32m[info][0m Using 1 devices.
+[32m[info][0m Estimated memory usage: 4.304937GB, Available: 16.000000GB
+[32m[info][0m DomainDecomposer: no decomposition used
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 0
+[32m[info][0m Output previously pinned: 0
+[34m[time][0m Prepare input and output buffer time: 0.008009 s
+[32m[info][0m Compressing subdomain 0 with shape: 512 512 512 
+[32m[info][0m Select device: Intel(R) UHD Graphics P630 [0x3e96]
+[34m[time][0m Decomposition time: 1.578197 s
+[34m[time][0m Decomposition throughput: 0.340180 GB/s
+[34m[time][0m Quantization time: 2.255520 s
+[34m[time][0m Quantization throughput: 0.238025 GB/s
+[32m[info][0m Outlier ratio: 16974078/134217728 (12.646674%)
+[32m[info][0m Huffman block size: 20480
+[32m[info][0m Huffman dictionary size: 8192
+[32m[info][0m Huffman compress ratio: 536870912/301821280 (1.778771)
+[34m[time][0m Huffman compress time: 1.632068 s
+[34m[time][0m Low-level compression time: 5.466116 s
+[34m[time][0m Low-level compression throughput: 0.098218 GB/s
+[34m[time][0m Compress single subdomain time: 6.459241 s
+[34m[time][0m Aggregated low-level compression time: 6.461803 s
+[34m[time][0m Aggregated low-level compression throughput: 0.083084 GB/s
+[34m[time][0m Serialization time: 0.007033 s
+[34m[time][0m High-level compression time: 6.476956 s
+[34m[time][0m High-level compression throughput: 0.082889 GB/s
+[32m[info][0m Compression ratio: 1.77877
+[32m[info][0m Using 1 devices.
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 0
+[32m[info][0m Output previously pinned: 0
+[34m[time][0m Prepare input and output buffer time: 0.000011 s
+[32m[info][0m DomainDecomposer: no decomposition used
+[34m[time][0m Deserialization time: 0.000113 s
+[32m[info][0m Decompressing subdomain 0 with shape: 512 512 512 
+[32m[info][0m Select device: Intel(R) UHD Graphics P630 [0x3e96]
+[34m[time][0m Huffman decompress time: 1.634561 s
+[34m[time][0m Dequantization time: 0.571065 s
+[34m[time][0m Dequantization throughput: 0.940123 GB/s
+[34m[time][0m Recomposition time: 1.356928 s
+[34m[time][0m Recomposition throughput: 0.395652 GB/s
+[34m[time][0m Low-level decompression time: 3.563077 s
+[34m[time][0m Low-level decompression throughput: 0.150676 GB/s
+[34m[time][0m Decompress single subdomain time: 4.540166 s
+[34m[time][0m Aggregated low-level decompression time: 4.542837 s
+[34m[time][0m Aggregated low-level decompression throughput: 0.118180 GB/s
+[34m[time][0m High-level decompression time: 4.544833 s
+[34m[time][0m High-level decompression throughput: 0.118128 GB/s
+[32m[info][0m Absoluate L_inf error: 0.000000e+00 ([32mSatisified[0m)
+[32m[info][0m MSE: -nan
+[32m[info][0m PSNR: -nan
+[32m[info][0m Using 1 devices.
+[32m[info][0m Estimated memory usage: 4.304937GB, Available: 16.000000GB
+[32m[info][0m DomainDecomposer: no decomposition used
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 0
+[32m[info][0m Output previously pinned: 0
+[34m[time][0m Prepare input and output buffer time: 0.007991 s
+[32m[info][0m Compressing subdomain 0 with shape: 512 512 512 
+[32m[info][0m Select device: Intel(R) UHD Graphics P630 [0x3e96]
+[34m[time][0m Decomposition time: 1.578161 s
+[34m[time][0m Decomposition throughput: 0.340188 GB/s
+[34m[time][0m Quantization time: 2.253957 s
+[34m[time][0m Quantization throughput: 0.238190 GB/s
+[32m[info][0m Outlier ratio: 16974078/134217728 (12.646674%)
+[32m[info][0m Huffman block size: 20480
+[32m[info][0m Huffman dictionary size: 8192
+[32m[info][0m Huffman compress ratio: 536870912/301821280 (1.778771)
+[34m[time][0m Huffman compress time: 1.646823 s
+[34m[time][0m Low-level compression time: 5.479281 s
+[34m[time][0m Low-level compression throughput: 0.097982 GB/s
+[34m[time][0m Compress single subdomain time: 6.475904 s
+[34m[time][0m Aggregated low-level compression time: 6.478511 s
+[34m[time][0m Aggregated low-level compression throughput: 0.082869 GB/s
+[34m[time][0m Serialization time: 0.006998 s
+[34m[time][0m High-level compression time: 6.493612 s
+[34m[time][0m High-level compression throughput: 0.082677 GB/s
+[32m[info][0m Compression ratio: 1.77877
+[32m[info][0m Using 1 devices.
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 0
+[32m[info][0m Output previously pinned: 0
+[34m[time][0m Prepare input and output buffer time: 0.000010 s
+[32m[info][0m DomainDecomposer: no decomposition used
+[34m[time][0m Deserialization time: 0.000176 s
+[32m[info][0m Decompressing subdomain 0 with shape: 512 512 512 
+[32m[info][0m Select device: Intel(R) UHD Graphics P630 [0x3e96]
+[34m[time][0m Huffman decompress time: 1.634257 s
+[34m[time][0m Dequantization time: 0.570983 s
+[34m[time][0m Dequantization throughput: 0.940258 GB/s
+[34m[time][0m Recomposition time: 1.358385 s
+[34m[time][0m Recomposition throughput: 0.395227 GB/s
+[34m[time][0m Low-level decompression time: 3.564156 s
+[34m[time][0m Low-level decompression throughput: 0.150631 GB/s
+[34m[time][0m Decompress single subdomain time: 4.538728 s
+[34m[time][0m Aggregated low-level decompression time: 4.541304 s
+[34m[time][0m Aggregated low-level decompression throughput: 0.118220 GB/s
+[34m[time][0m High-level decompression time: 4.544135 s
+[34m[time][0m High-level decompression throughput: 0.118146 GB/s
+[32m[info][0m Absoluate L_inf error: 0.000000e+00 ([32mSatisified[0m)
+[32m[info][0m MSE: -nan
+[32m[info][0m PSNR: -nan
+[32m[info][0m Using 1 devices.
+[32m[info][0m Estimated memory usage: 4.304937GB, Available: 16.000000GB
+[32m[info][0m DomainDecomposer: no decomposition used
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 0
+[32m[info][0m Output previously pinned: 0
+[34m[time][0m Prepare input and output buffer time: 0.007606 s
+[32m[info][0m Compressing subdomain 0 with shape: 512 512 512 
+[32m[info][0m Select device: Intel(R) UHD Graphics P630 [0x3e96]
+[34m[time][0m Decomposition time: 1.578629 s
+[34m[time][0m Decomposition throughput: 0.340087 GB/s
+[34m[time][0m Quantization time: 2.206837 s
+[34m[time][0m Quantization throughput: 0.243276 GB/s
+[32m[info][0m Outlier ratio: 16974078/134217728 (12.646674%)
+[32m[info][0m Huffman block size: 20480
+[32m[info][0m Huffman dictionary size: 8192
+[32m[info][0m Huffman compress ratio: 536870912/301821280 (1.778771)
+[34m[time][0m Huffman compress time: 1.610405 s
+[34m[time][0m Low-level compression time: 5.396247 s
+[34m[time][0m Low-level compression throughput: 0.099490 GB/s
+[34m[time][0m Compress single subdomain time: 6.391463 s
+[34m[time][0m Aggregated low-level compression time: 6.394089 s
+[34m[time][0m Aggregated low-level compression throughput: 0.083964 GB/s
+[34m[time][0m Serialization time: 0.007398 s
+[34m[time][0m High-level compression time: 6.409208 s
+[34m[time][0m High-level compression throughput: 0.083766 GB/s
+[32m[info][0m Compression ratio: 1.77877
+[32m[info][0m Using 1 devices.
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 0
+[32m[info][0m Output previously pinned: 0
+[34m[time][0m Prepare input and output buffer time: 0.000010 s
+[32m[info][0m DomainDecomposer: no decomposition used
+[34m[time][0m Deserialization time: 0.000109 s
+[32m[info][0m Decompressing subdomain 0 with shape: 512 512 512 
+[32m[info][0m Select device: Intel(R) UHD Graphics P630 [0x3e96]
+[34m[time][0m Huffman decompress time: 1.640011 s
+[34m[time][0m Dequantization time: 0.577560 s
+[34m[time][0m Dequantization throughput: 0.929550 GB/s
+[34m[time][0m Recomposition time: 1.369525 s
+[34m[time][0m Recomposition throughput: 0.392012 GB/s
+[34m[time][0m Low-level decompression time: 3.587589 s
+[34m[time][0m Low-level decompression throughput: 0.149647 GB/s
+[34m[time][0m Decompress single subdomain time: 4.573187 s
+[34m[time][0m Aggregated low-level decompression time: 4.575820 s
+[34m[time][0m Aggregated low-level decompression throughput: 0.117328 GB/s
+[34m[time][0m High-level decompression time: 4.578208 s
+[34m[time][0m High-level decompression throughput: 0.117267 GB/s
+[32m[info][0m Absoluate L_inf error: 0.000000e+00 ([32mSatisified[0m)
+[32m[info][0m MSE: -nan
+[32m[info][0m PSNR: -nan
+[32m[info][0m Using 1 devices.
+[32m[info][0m Estimated memory usage: 4.304937GB, Available: 16.000000GB
+[32m[info][0m DomainDecomposer: no decomposition used
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 0
+[32m[info][0m Output previously pinned: 0
+[34m[time][0m Prepare input and output buffer time: 0.007667 s
+[32m[info][0m Compressing subdomain 0 with shape: 512 512 512 
+[32m[info][0m Select device: Intel(R) UHD Graphics P630 [0x3e96]
+[34m[time][0m Decomposition time: 1.578257 s
+[34m[time][0m Decomposition throughput: 0.340167 GB/s
+[34m[time][0m Quantization time: 2.214520 s
+[34m[time][0m Quantization throughput: 0.242432 GB/s
+[32m[info][0m Outlier ratio: 16974078/134217728 (12.646674%)
+[32m[info][0m Huffman block size: 20480
+[32m[info][0m Huffman dictionary size: 8192
+[32m[info][0m Huffman compress ratio: 536870912/301821280 (1.778771)
+[34m[time][0m Huffman compress time: 1.620124 s
+[34m[time][0m Low-level compression time: 5.413224 s
+[34m[time][0m Low-level compression throughput: 0.099178 GB/s
+[34m[time][0m Compress single subdomain time: 6.401382 s
+[34m[time][0m Aggregated low-level compression time: 6.404010 s
+[34m[time][0m Aggregated low-level compression throughput: 0.083834 GB/s
+[34m[time][0m Serialization time: 0.006461 s
+[34m[time][0m High-level compression time: 6.418249 s
+[34m[time][0m High-level compression throughput: 0.083648 GB/s
+[32m[info][0m Compression ratio: 1.77877
+[32m[info][0m Using 1 devices.
+[32m[info][0m Output preallocated: 1
+[32m[info][0m Input previously pinned: 0
+[32m[info][0m Output previously pinned: 0
+[34m[time][0m Prepare input and output buffer time: 0.000010 s
+[32m[info][0m DomainDecomposer: no decomposition used
+[34m[time][0m Deserialization time: 0.000152 s
+[32m[info][0m Decompressing subdomain 0 with shape: 512 512 512 
+[32m[info][0m Select device: Intel(R) UHD Graphics P630 [0x3e96]
+[34m[time][0m Huffman decompress time: 1.633247 s
+[34m[time][0m Dequantization time: 0.574093 s
+[34m[time][0m Dequantization throughput: 0.935164 GB/s
+[34m[time][0m Recomposition time: 1.356620 s
+[34m[time][0m Recomposition throughput: 0.395742 GB/s
+[34m[time][0m Low-level decompression time: 3.564508 s
+[34m[time][0m Low-level decompression throughput: 0.150616 GB/s
+[34m[time][0m Decompress single subdomain time: 4.543030 s
+[34m[time][0m Aggregated low-level decompression time: 4.545602 s
+[34m[time][0m Aggregated low-level decompression throughput: 0.118108 GB/s
+[34m[time][0m High-level decompression time: 4.548139 s
+[34m[time][0m High-level decompression throughput: 0.118042 GB/s
+[32m[info][0m Absoluate L_inf error: 0.000000e+00 ([32mSatisified[0m)
+[32m[info][0m MSE: -nan
+[32m[info][0m PSNR: -nan
