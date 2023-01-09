@@ -12,6 +12,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <cstring>
+#include <mpi.h>
+
 
 #include "mgard/compress_x.hpp"
 #include "mgard/mgard-x/Utilities/ErrorCalculator.h"
@@ -161,7 +164,7 @@ template <typename T> void min_max(size_t n, T *in_buff) {
 }
 
 template <typename T> void readfile(const char *input_file, T *in_buff, size_t read_size) {
-  std::cout << mgard_x::log::log_info << "Loading file: " << input_file << "\n";
+  //std::cout << mgard_x::log::log_info << "Loading file: " << input_file << "\n";
 
   FILE *pFile;
   pFile = fopen(input_file, "rb");
@@ -288,25 +291,42 @@ int verbose_to_log_level(int verbose) {
   }
 }
 
+struct result {
+	double write;
+  double read;
+  double comp;
+  double decomp;
+};
+
 template <typename T>
-int launch_compress(mgard_x::DIM D, enum mgard_x::data_type dtype,
+result launch_compress(mgard_x::DIM D, enum mgard_x::data_type dtype,
                     const char *input_file, const char *output_file,
                     std::vector<mgard_x::SIZE> shape, bool non_uniform,
                     const char *coords_file, double tol, double s,
                     enum mgard_x::error_bound_type mode, int reorder,
                     int lossless, enum mgard_x::device_type dev_type,
                     int num_dev, int verbose, int num_sim_iterations,
-                    bool use_compression, int accumulate_data, int compute_delay) {
+                    bool use_compression, int accumulate_data, int compute_delay,
+                    bool prefetch, mgard_x::SIZE max_memory_footprint) {
+   
 
   int comm_size, rank;
   MPI_Comm_size(MPI_COMM_WORLD, &comm_size);
   MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+ 
+  if (rank == 0) { 
+  std::cout << ">>> use_compression: " << use_compression << "\n";
+  std::cout << ">>> accumulate_data: " << accumulate_data << "\n";
+  std::cout << ">>> prefetch: " << prefetch << "\n";
+  std::cout << ">>> comm_size: " << comm_size << "\n";
+	}
+  result res;
 
   adios2::ADIOS adios(MPI_COMM_WORLD);
   adios2::IO io = adios.DeclareIO("SimulationData");
   io.SetEngine("BP4");
 
-  adios2::Engine writer = io.Open(output_file, adios2::Mode::Write);
+  //adios2::Engine writer = io.Open(output_file, adios2::Mode::Write);
 
   mgard_x::Config config;
   config.log_level = verbose_to_log_level(verbose);
@@ -314,6 +334,8 @@ int launch_compress(mgard_x::DIM D, enum mgard_x::data_type dtype,
   config.dev_type = dev_type;
   config.num_dev = num_dev;
   config.reorder = reorder;
+  config.prefetch = prefetch;
+  config.max_memory_footprint = max_memory_footprint;
 
   if (lossless == 0) {
     config.lossless = mgard_x::lossless_type::Huffman;
@@ -338,12 +360,17 @@ int launch_compress(mgard_x::DIM D, enum mgard_x::data_type dtype,
       original_data[i] = rand() % 10 + 1;
     }
   } else {
-    for (int i = 0; i < accumulate_data; i++) {
-      readfile(input_file, original_data + i * original_size*sizeof(T), original_size * sizeof(T));
+    readfile(input_file, original_data, original_size * sizeof(T));
+    for (int i = 1; i < accumulate_data; i++) {
+			for (int j = 0; j < original_size; j++) {
+        original_data[i*original_size + j] = original_data[j];
+      }
+      //readfile(input_file, original_data + i * original_size*sizeof(T), original_size * sizeof(T));
     }
   }
 
   original_size *= accumulate_data;
+  shape[0] *= accumulate_data;
 
   if (rank == 0) {
     std::cout << mgard_x::log::log_info << "Data per rank: "
@@ -351,7 +378,7 @@ int launch_compress(mgard_x::DIM D, enum mgard_x::data_type dtype,
   }
 
   void *compressed_data = (void *)new T[original_size];
-  size_t compressed_size = 0;
+  size_t compressed_size = original_size * sizeof(T);
   mgard_x::pin_memory(original_data, original_size * sizeof(T), config);
   mgard_x::pin_memory(compressed_data, original_size * sizeof(T), config);
   void *decompressed_data = malloc(original_size * sizeof(T));
@@ -361,7 +388,7 @@ int launch_compress(mgard_x::DIM D, enum mgard_x::data_type dtype,
   MPI_Barrier(MPI_COMM_WORLD);
   timer_total.start();
   for (int sim_iter = 0; sim_iter < num_sim_iterations; sim_iter++) {
-    writer.BeginStep();
+    //writer.BeginStep();
 
     sleep(compute_delay);
     if (use_compression) {
@@ -373,15 +400,17 @@ int launch_compress(mgard_x::DIM D, enum mgard_x::data_type dtype,
       MPI_Barrier(MPI_COMM_WORLD);
       timer.end();
       double compression_time = timer.get();
-      double max_comrpession_time;
-      MPI_Reduce(&compression_time, &max_comrpession_time, 1, MPI_DOUBLE, MPI_MAX, 0, MPI_COMM_WORLD);
+      //std::cout << "rank " << rank << " compression time: " << compression_time << "\n";
+      double max_compression_time;
+      MPI_Reduce(&compression_time, &max_compression_time, 1, MPI_DOUBLE, MPI_MAX, 0, MPI_COMM_WORLD);
       if (rank == 0) {
+        res.comp = max_compression_time;
         std::cout << mgard_x::log::log_info << "Compression time: "
-                << max_comrpession_time << "\n";
+                << max_compression_time << "\n";
         std::cout << mgard_x::log::log_info << "Compression throughput: "
-                << (double)original_size * sizeof(T) * comm_size/max_comrpession_time/1e9 << " GB/s.\n";
+                << (double)original_size * sizeof(T) * comm_size/max_compression_time/1e9 << " GB/s.\n";
         std::cout << mgard_x::log::log_info << "Compression ratio: "
-                << (double)original_size * sizeof(T) / compressed_size << "\n";
+                << (double)original_size * sizeof(T) / (compressed_size) << "\n";
       }
       timer.clear();
     }
@@ -390,29 +419,31 @@ int launch_compress(mgard_x::DIM D, enum mgard_x::data_type dtype,
     std::string var_name = "var_step" + std::to_string(sim_iter);
     size_t var_size = use_compression ? compressed_size : original_size * sizeof(T);
     mgard_x::Byte *var_data = use_compression ? (mgard_x::Byte *)compressed_data : (mgard_x::Byte *) original_data;
-    adios2::Variable<mgard_x::Byte> simulation_var;
-    simulation_var = io.DefineVariable<mgard_x::Byte>(var_name,
-                                                      {var_size*comm_size}, 
-                                                      {var_size*rank}, 
-                                                      {var_size});
+    //adios2::Variable<mgard_x::Byte> simulation_var;
+    //simulation_var = io.DefineVariable<mgard_x::Byte>(var_name,
+    //                                                  {var_size*comm_size}, 
+    //                                                  {var_size*rank}, 
+    //                                                  {var_size});
     MPI_Barrier(MPI_COMM_WORLD);
     timer.start();
-    writer.Put<mgard_x::Byte>(simulation_var, var_data, adios2::Mode::Sync);
+    //writer.Put<mgard_x::Byte>(simulation_var, var_data, adios2::Mode::Sync);
     MPI_Barrier(MPI_COMM_WORLD);
     timer.end();
     double write_time = timer.get();
     double max_write_time;
     MPI_Reduce(&write_time, &max_write_time, 1, MPI_DOUBLE, MPI_MAX, 0, MPI_COMM_WORLD);
     if (rank == 0) {
-      std::cout << mgard_x::log::log_info << "Write time: "
-              << max_write_time << "\n";
-      std::cout << mgard_x::log::log_info << "Write throughput: "
-              << (double)var_size*comm_size/max_write_time/1e9 << " GB/s.\n";
+      res.write = max_write_time;
+      //std::cout << mgard_x::log::log_info << "Write time: "
+      //        << max_write_time << "\n";
+      //std::cout << mgard_x::log::log_info << "Write throughput: "
+      //        << (double)var_size*comm_size/max_write_time/1e9 << " GB/s.\n";
     }
     timer.clear();
-    writer.EndStep();
+    //writer.EndStep();
+ 
   }
-  writer.Close();
+  //writer.Close();
   MPI_Barrier(MPI_COMM_WORLD);
   timer_total.end();
   double total_time = timer_total.get();
@@ -426,49 +457,54 @@ int launch_compress(mgard_x::DIM D, enum mgard_x::data_type dtype,
   
   MPI_Barrier(MPI_COMM_WORLD);
   timer_total.start();
-  adios2::Engine reader = io.Open(output_file, adios2::Mode::Read);
+  //adios2::Engine reader = io.Open(output_file, adios2::Mode::Read);
   for (int sim_iter = 0; sim_iter < num_sim_iterations; sim_iter++) {
     sleep(compute_delay);
-    reader.BeginStep(); 
+
+    //reader.BeginStep(); 
     std::string var_name = "var_step" + std::to_string(sim_iter);
     // ********* Read ********** //
     std::vector<mgard_x::Byte> var_data_vec;
-    adios2::Variable<mgard_x::Byte> simulation_var;
-    simulation_var = io.InquireVariable<mgard_x::Byte>(var_name);
-    adios2::Dims var_shape = simulation_var.Shape();
-    size_t var_size = var_shape[0] / comm_size;
-    adios2::Box<adios2::Dims> sel({var_size*rank}, {var_size});
-    simulation_var.SetSelection(sel);
+    //adios2::Variable<mgard_x::Byte> simulation_var;
+    //simulation_var = io.InquireVariable<mgard_x::Byte>(var_name);
+    //adios2::Dims var_shape = simulation_var.Shape();
+    //size_t var_size = var_shape[0] / comm_size;
+    //adios2::Box<adios2::Dims> sel({var_size*rank}, {var_size});
+    //simulation_var.SetSelection(sel);
     MPI_Barrier(MPI_COMM_WORLD);
     timer.start();
-    reader.Get<mgard_x::Byte>(simulation_var, var_data_vec, adios2::Mode::Sync);
+    //reader.Get<mgard_x::Byte>(simulation_var, var_data_vec, adios2::Mode::Sync);
     MPI_Barrier(MPI_COMM_WORLD);
     timer.end();
     double read_time = timer.get();
     double max_read_time;
     MPI_Reduce(&read_time, &max_read_time, 1, MPI_DOUBLE, MPI_MAX, 0, MPI_COMM_WORLD);
     if (rank == 0) {
-      std::cout << mgard_x::log::log_info << "Read time: "
-              << max_read_time << "\n";
-      std::cout << mgard_x::log::log_info << "Read throughput: "
-              << (double)var_size*comm_size/max_read_time/1e9 << " GB/s.\n";
+      res.read = max_read_time;
+      //std::cout << mgard_x::log::log_info << "Read time: "
+      //        << max_read_time << "\n";
+      //std::cout << mgard_x::log::log_info << "Read throughput: "
+      //        << (double)var_size*comm_size/max_read_time/1e9 << " GB/s.\n";
     }
     timer.clear();
 
+
     if (use_compression) {
       // ********* Decompression ********** //
-      compressed_size = var_shape[0] / comm_size;
-      memcpy(compressed_data, var_data_vec.data(), compressed_size);
+      //compressed_size = var_shape[0] / comm_size;
+      //memcpy(compressed_data, var_data_vec.data(), compressed_size);
       MPI_Barrier(MPI_COMM_WORLD);
       timer.start();
       mgard_x::decompress(compressed_data, compressed_size, decompressed_data,
                           config, true);
+      
       MPI_Barrier(MPI_COMM_WORLD);
       timer.end();
       double decompress_time = timer.get();
       double max_decompress_time;
       MPI_Reduce(&decompress_time, &max_decompress_time, 1, MPI_DOUBLE, MPI_MAX, 0, MPI_COMM_WORLD);
       if (rank == 0) {
+        res.decomp = max_decompress_time;
         std::cout << mgard_x::log::log_info << "Decompression time: "
                 << max_decompress_time << "\n";
         std::cout << mgard_x::log::log_info << "Decompression throughput: "
@@ -476,12 +512,10 @@ int launch_compress(mgard_x::DIM D, enum mgard_x::data_type dtype,
       }
       timer.clear();
     }
-    reader.EndStep(); 
-    // print_statistics<T>(s, mode, shape, original_data, (T *)decompressed_data,
-    //                     tol, config.normalize_coordinates);
+    //reader.EndStep(); 
   }
 
-  reader.Close();
+  //reader.Close();
 
   MPI_Barrier(MPI_COMM_WORLD);
   timer_total.end();
@@ -500,8 +534,7 @@ int launch_compress(mgard_x::DIM D, enum mgard_x::data_type dtype,
   delete[](T *) original_data;
   delete[](unsigned char *) compressed_data;
   delete[](T *) decompressed_data;
-
-  return 0;
+  return res;
 }
 
 bool run(int argc, char *argv[]) {
@@ -510,13 +543,7 @@ bool run(int argc, char *argv[]) {
   MPI_Comm_size(MPI_COMM_WORLD, &comm_size);
   MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 
-  bool use_compression = false;
-  if(get_arg_int(argc, argv, "-z") == 1) {
-    use_compression = true;
-  } else {
-    use_compression = false;
-  }
-
+  //std::cout << "rank " << rank << " of " << comm_size << "\n";
 
   std::string input_file = get_arg(argc, argv, "-i");
   std::string output_file = get_arg(argc, argv, "-c");
@@ -631,10 +658,10 @@ bool run(int argc, char *argv[]) {
     if (rank == 0) std::cout << mgard_x::log::log_info << "iterations: " << repeat << "\n";
   }
 
-  int accumulate_data = 1;
+  int max_accumulate_data = 1;
   if (has_arg(argc, argv, "-a")) {
-    accumulate_data = get_arg_int(argc, argv, "-a");
-    if (rank == 0) std::cout << mgard_x::log::log_info << "accumulate data: " << accumulate_data << "\n";
+    max_accumulate_data = get_arg_int(argc, argv, "-a");
+    if (rank == 0) std::cout << mgard_x::log::log_info << "max_accumulate data: " << max_accumulate_data << "\n";
   }
 
   int compute_delay = 0;
@@ -643,24 +670,116 @@ bool run(int argc, char *argv[]) {
     if (rank == 0) std::cout << mgard_x::log::log_info << "compute delay: " << compute_delay << "\n";
   }
 
-  if (verbose)
-    if (rank == 0) std::cout << mgard_x::log::log_info << "Verbose: enabled\n";
-  if (dtype == mgard_x::data_type::Double) {
-    launch_compress<double>(
-        D, dtype, input_file.c_str(), output_file.c_str(), shape, non_uniform,
-        non_uniform_coords_file.c_str(), tol, s, mode, reorder,
-        lossless_level, dev_type, num_dev, verbose, repeat, use_compression, accumulate_data, compute_delay);
-  } else if (dtype == mgard_x::data_type::Float) {
-    launch_compress<float>(
-        D, dtype, input_file.c_str(), output_file.c_str(), shape, non_uniform,
-        non_uniform_coords_file.c_str(), tol, s, mode, reorder,
-        lossless_level, dev_type, num_dev, verbose, repeat, use_compression, accumulate_data, compute_delay);
+
+  mgard_x::SIZE max_memory_footprint = std::numeric_limits<mgard_x::SIZE>::max();
+  if (has_arg(argc, argv, "-f")) {
+    max_memory_footprint = (mgard_x::SIZE)get_arg_double(argc, argv, "-f");
   }
+
+  
+	std::vector<double> write, read, comp_no_pref, decomp_no_pref, comp_w_pref, decomp_w_pref, write_comp, read_comp;
+  bool prefetch, use_compression;
+  std::vector<int> accumulate_data = {1, 2, 4, 6, 8, 10};
+  std::vector<double> ebs = {1e14, 1e15, 1e16, 1e17};
+  //for ( i = 0; i < 6; i++) {
+  //for (double tol : ebs) { 
+    //int i = 5;
+  // if(accumulate_data[i] > max_accumulate_data) break;
+  result res_no_comp;
+  use_compression = false;
+  if (dtype == mgard_x::data_type::Double) {
+    res_no_comp = launch_compress<double>(
+        D, dtype, input_file.c_str(), output_file.c_str(), shape, non_uniform,
+        non_uniform_coords_file.c_str(), tol, s, mode, reorder,
+        lossless_level, dev_type, num_dev, verbose, repeat, use_compression, 
+        max_accumulate_data, compute_delay, prefetch, max_memory_footprint);
+  } else if (dtype == mgard_x::data_type::Float) {   
+    res_no_comp = launch_compress<float>(
+        D, dtype, input_file.c_str(), output_file.c_str(), shape, non_uniform,
+        non_uniform_coords_file.c_str(), tol, s, mode, reorder,
+        lossless_level, dev_type, num_dev, verbose, repeat, use_compression, 
+        max_accumulate_data, compute_delay, prefetch, max_memory_footprint);
+  }
+
+  for (int i = 0; i < 4; i++) {
+    write.push_back(res_no_comp.write);
+    read.push_back(res_no_comp.read);     
+  }
+  for (double tol : ebs) {
+    result res_comp_no_prefetch;
+    use_compression = true;
+    prefetch = false;    
+    if (dtype == mgard_x::data_type::Double) {
+      res_comp_no_prefetch = launch_compress<double>(
+        D, dtype, input_file.c_str(), output_file.c_str(), shape, non_uniform,
+        non_uniform_coords_file.c_str(), tol, s, mode, reorder,
+        lossless_level, dev_type, num_dev, verbose, repeat, use_compression,
+        max_accumulate_data, compute_delay, prefetch, max_memory_footprint);
+    } else if (dtype == mgard_x::data_type::Float) {
+      res_comp_no_prefetch = launch_compress<float>(
+        D, dtype, input_file.c_str(), output_file.c_str(), shape, non_uniform,
+        non_uniform_coords_file.c_str(), tol, s, mode, reorder,
+        lossless_level, dev_type, num_dev, verbose, repeat, use_compression,
+        max_accumulate_data, compute_delay, prefetch, max_memory_footprint);
+    }
+    comp_no_pref.push_back(res_comp_no_prefetch.comp);
+    decomp_no_pref.push_back(res_comp_no_prefetch.decomp);
+    write_comp.push_back(res_comp_no_prefetch.write);
+    read_comp.push_back(res_comp_no_prefetch.read);
+
+    result res_comp_w_prefetch;
+    use_compression = true; 
+    prefetch = true;
+    if (dtype == mgard_x::data_type::Double) {
+      res_comp_w_prefetch = launch_compress<double>(
+        D, dtype, input_file.c_str(), output_file.c_str(), shape, non_uniform,
+        non_uniform_coords_file.c_str(), tol, s, mode, reorder,
+        lossless_level, dev_type, num_dev, verbose, repeat, use_compression,
+        max_accumulate_data, compute_delay, prefetch, max_memory_footprint);
+    } else if (dtype == mgard_x::data_type::Float) {
+      res_comp_w_prefetch = launch_compress<float>(
+        D, dtype, input_file.c_str(), output_file.c_str(), shape, non_uniform,
+        non_uniform_coords_file.c_str(), tol, s, mode, reorder,
+        lossless_level, dev_type, num_dev, verbose, repeat, use_compression,
+        max_accumulate_data, compute_delay, prefetch, max_memory_footprint);
+    }
+ 
+    comp_w_pref.push_back(res_comp_w_prefetch.comp);
+    decomp_w_pref.push_back(res_comp_w_prefetch.decomp);
+  }
+
+  if (rank == 0) {
+  for (double time : write) std::cout << time << ", ";
+  std::cout << "\n";
+  for (double time : read) std::cout << time << ", ";
+  std::cout << "\n";
+  for (double time : comp_no_pref) std::cout << time << ", ";
+  std::cout << "\n";
+  for (double time : decomp_no_pref) std::cout << time << ", ";
+  std::cout << "\n";
+  for (double time : comp_w_pref) std::cout << time << ", ";
+  std::cout << "\n";
+  for (double time : decomp_w_pref) std::cout << time << ", ";
+  std::cout << "\n";
+  for (double time : write_comp) std::cout << time << ", ";
+  std::cout << "\n";
+  for (double time : read_comp) std::cout << time << ", ";
+  std::cout << "\n";
+	}
   return true;
 }
 
+
 int main(int argc, char *argv[]) {
   MPI_Init(&argc, &argv);
+  int size;
+  MPI_Comm_size(MPI_COMM_WORLD, &size);
+
+  int rank;
+  MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+
+  //printf("rank %d of %d\n", rank, size);
+
   run(argc, argv);
   MPI_Finalize();
   return 0;
